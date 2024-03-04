@@ -7,6 +7,7 @@ import {
 import { cn } from "../../utils/cn";
 import Link from "next/link";
 
+
 export const FloatingNav = ({
   navItems,
   className,
