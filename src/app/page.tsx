@@ -4,6 +4,7 @@ import { SparklesCore } from "../../components/ui/sparkles";
 import Image from "next/image";
 import { SparklesPreview } from "./sparkles";
 import { FloatingNavDemo } from "./floating-navbar";
+import { ThreeDCardDemo } from "./3d-card"
 
 
 export default function Home() {
@@ -15,6 +16,17 @@ export default function Home() {
 
       <div>
         <SparklesPreview />
+      </div>
+
+      <div className="h-[6rem]">
+        <h2>Projects</h2>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
+        <ThreeDCardDemo />
+        <ThreeDCardDemo />
+        <ThreeDCardDemo />
+        <ThreeDCardDemo />
       </div>
       
     </main>
