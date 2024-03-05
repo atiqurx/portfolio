@@ -14,7 +14,7 @@ export function FloatingNavDemo() {
       link: "/about"
     },
     {
-      name: "Resume",
+      name: "Pojects",
       link: "/contact"
     },
   ];

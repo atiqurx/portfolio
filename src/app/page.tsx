@@ -18,7 +18,6 @@ export default function Home() {
         <SparklesPreview />
       </div>
 
-      {/* <div className="h-[6rem] flex items-center justify-center text-3xl font-bold text-gray-500 dark:text-white tracking-[0.4rem]"> */}
       <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
         Explore Projects
       </div>
