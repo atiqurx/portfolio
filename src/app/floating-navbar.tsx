@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { FloatingNav } from "../../components/ui/floating-navbar";
-import { useScroll } from "react-use";
+
 
 
 export function FloatingNavDemo() {
@@ -14,7 +14,7 @@ export function FloatingNavDemo() {
     },
     {
       name: "About",
-      link: "/"
+      link: "/about"
     },
     {
       name: "Pojects",

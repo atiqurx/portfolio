@@ -19,18 +19,22 @@ export default function Home() {
         <SparklesPreview />
       </div>
 
-      <div id="projects" className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
-        Explore Projects
-      </div>
+      <section id="projects" >
+        <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
+          Explore Projects
+        </div>
 
 
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
-        <ThreeDCardDemo />
-        <ThreeDCardDemo />
-        <ThreeDCardDemo />
-        <ThreeDCardDemo />
-      </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
+          <ThreeDCardDemo />
+          <ThreeDCardDemo />
+          <ThreeDCardDemo />
+          <ThreeDCardDemo />
+        </div>
+
+      </section>
+      
       
       
       <footer className="w-11/12 min-h-48">
