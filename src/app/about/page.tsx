@@ -1,33 +1,32 @@
 "use client";
-import { TypewriterEffectSmooth } from "../../../components/ui/typewriter-effect";
+import React from "react";
+import { TypewriterEffectSmoothDemo } from "../typewriter-effect";
+import BasicTimeline from "../../../components/ui/Timeline";
+
+
 export function AboutPage() {
-  const words = [
-    {
-      text: "Honors",
-    },
-    {
-      text: "Computer",
-    },
-    {
-      text: "Science",
-    },
-    {
-      text: "at",
-    },
-    {
-      text: "UT Arlington.",
-      className: "text-blue-500 text-indigo-500",
-    },
-  ];
+
 
   return (
-    <div className="flex flex-col items-center justify-center h-[100rem]  ">
+    <section>
+      <div className="flex flex-col items-center justify-center">
 
-      <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+        <h1 className="p-4" style={{ marginTop: "10rem" }}>About Me</h1>
 
-      </p>
-      <TypewriterEffectSmooth words={words} />
-    </div>
+
+          <div className="flex justify-between w-11/12">
+            <TypewriterEffectSmoothDemo  />
+            
+            <div className="">
+            
+            </div>
+          </div>
+          
+        </div>
+
+        <BasicTimeline />
+    </section>
+    
   );
 }
 export default AboutPage;
