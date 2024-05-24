@@ -9,20 +9,41 @@ import { ThreeDCardDemo } from "./3d-card"
 export default function Home() {
   const cards = [
     {
-      title: "Project 1",
+      title: "Service Request System",
       description: "Description for project 1",
-      imageUrl: "/project1.png",
+      imageUrl: "/green.png",
       buttonText1: "Button 1",
-      buttonText2: "Button 2"
+      buttonLink1:"https://github.com/atiqurx",
+      buttonText2: "Button 2",
+      buttonLink2: "https://github.com/atiqurx"
     },
     {
-      title: "Project 2",
-      description: "Description for project 2",
-      imageUrl: "/project2.png",
-      buttonText1: "Button 1",
-      buttonText2: "Button 2"
+      title: "UTA Datathon 2024 Website",
+      description: "Official website of UTA Datathon 2024 for registrations and general information.",
+      imageUrl: "/utadatathon-site-ss.png",
+      buttonText1: "Website",
+      buttonLink1:"https://utadatathon.tech",
+      buttonText2: "Github",
+      buttonLink2: "https://github.com/utadatathon/utadatathon2024-website"
     },
-    // Add more card data as needed
+    {
+      title: "Credit Card Fraud Detection",
+      description: "Exploratory data analysis and prediction model for credit card fraud detection.",
+      imageUrl: "/utadatathon-site-ss.png",
+      buttonText1: "",
+      buttonLink1:"#",
+      buttonText2: "Kaggle",
+      buttonLink2: "https://www.kaggle.com/code/atiqurrahman75/credit-card-fraud-detection"
+    },
+    {
+      title: "CBRE Asset Management",
+      description: "A machine learning model that predicts the maintenance needs in commercial building assets",
+      imageUrl: "/cbre.jpg",
+      buttonText1: "",
+      buttonLink1:"#",
+      buttonText2: "Github",
+      buttonLink2: "https://github.com/atiqurx/cbre_asset_condition_monitor"
+    },
   ];
 
   return (
@@ -47,7 +68,9 @@ export default function Home() {
                 description={card.description}
                 imageUrl={card.imageUrl}
                 buttonText1={card.buttonText1}
+                buttonLink1={card.buttonLink1}
                 buttonText2={card.buttonText2}
+                buttonLink2={card.buttonLink2}
               />
             ))}
         </div>
