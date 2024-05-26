@@ -10,7 +10,7 @@ export default function Home() {
   const cards = [
     {
       title: "Service Request System",
-      description: "An Android application developed with Java that enables users to initiate service requests and connect with service providers.",
+      description: "An Android application developed with Java that enables users to place service requests to selected service providers.",
       imageUrl: "/srs-context.png",
       buttonText1: "Button 1",
       buttonLink1:"https://github.com/atiqurx",
@@ -49,18 +49,14 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between main">
 
-      <div>
-        <SparklesPreview />
-      </div>
+      <SparklesPreview />
 
-      <section id="projects" >
+      <section id="projects" className="p-5">
         <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
           Explore Projects
         </div>
 
-
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-5">
           {cards.map((card, index) => (
               <ThreeDCardDemo
                 key={index}
