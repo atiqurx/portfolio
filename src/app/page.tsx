@@ -12,10 +12,10 @@ export default function Home() {
       title: "Service Request System",
       description: "An Android application developed with Java that enables users to place service requests to selected service providers.",
       imageUrl: "/srs-context.png",
-      buttonText1: "Button 1",
-      buttonLink1:"https://github.com/atiqurx",
-      buttonText2: "Button 2",
-      buttonLink2: "https://github.com/atiqurx"
+      buttonText1: "",
+      buttonLink1:"#",
+      buttonText2: "Demo Soon",
+      buttonLink2: "#"
     },
     {
       title: "UTA Datathon 2024 Website",
