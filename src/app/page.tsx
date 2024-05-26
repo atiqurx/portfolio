@@ -10,8 +10,8 @@ export default function Home() {
   const cards = [
     {
       title: "Service Request System",
-      description: "Description for project 1",
-      imageUrl: "/green.png",
+      description: "An Android application developed with Java that enables users to initiate service requests and connect with service providers.",
+      imageUrl: "/srs-context.png",
       buttonText1: "Button 1",
       buttonLink1:"https://github.com/atiqurx",
       buttonText2: "Button 2",
@@ -29,7 +29,7 @@ export default function Home() {
     {
       title: "Credit Card Fraud Detection",
       description: "Exploratory data analysis and prediction model for credit card fraud detection.",
-      imageUrl: "/utadatathon-site-ss.png",
+      imageUrl: "/credit-fraud.png",
       buttonText1: "",
       buttonLink1:"#",
       buttonText2: "Kaggle",
