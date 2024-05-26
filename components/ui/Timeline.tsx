@@ -17,35 +17,35 @@ export default function BasicTimeline() {
         </TimelineSeparator>
         <TimelineContent>
           <div>
-            <h1>Developement Lead</h1>
-            <p>UTA Datathon</p>
-            <p className="mt-2"><EventIcon fontSize="small" />  Feb 2024 - Present</p>
+          <h1>Supplemental Instruction Leader - CSE 1310</h1>
+            <p>UTA Academic Success Center</p>
+            <p className="mt-2 opacity-75"> <EventIcon fontSize="small" />  Aug 2023 - Present</p>
           </div>
         </TimelineContent>
       </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot variant="outlined" color="primary" />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
+      {/* <TimelineItem> */}
+        {/* <TimelineSeparator>
+          <TimelineDot variant="outlined" color="primary" /> */}
+          {/* <TimelineConnector /> */}
+        {/* </TimelineSeparator> */}
+        {/* <TimelineContent>
           <div>
             <h1>Undergraduate Research Assistant</h1>
             <p>University of Texas at Arlington </p>
             <p className="mt-2"> <EventIcon fontSize="small" />  Feb 2024 - Present</p>
           </div>
-        </TimelineContent>
-      </TimelineItem>
+        </TimelineContent> */}
+      {/* </TimelineItem> */}
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot variant="outlined" color="primary" />
+          <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
           <div>
-            <h1>Supplemental Instruction Leader - CSE 1310</h1>
-            <p>UTA Academic Success Center</p>
-            <p className="mt-2"> <EventIcon fontSize="small" />  Aug 2023 - Present</p>
+          <h1>Developement Lead</h1>
+            <p>UTA Datathon</p>
+            <p className="mt-2 opacity-75"><EventIcon fontSize="small"/>  Feb 2024 - Apr 2024</p>
           </div>
         </TimelineContent>
       </TimelineItem>
@@ -57,7 +57,7 @@ export default function BasicTimeline() {
           <div>
             <h1>Orientation Leader</h1>
             <p>UTA New Maverick Orientation</p>
-            <p className="mt-2"> <EventIcon fontSize="small" />  Jan 2023 - Aug 2023</p>
+            <p className="mt-2 opacity-75"> <EventIcon fontSize="small" />  Jan 2023 - Aug 2023</p>
           </div>
         </TimelineContent>
       </TimelineItem>
