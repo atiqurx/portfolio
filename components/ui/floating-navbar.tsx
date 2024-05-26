@@ -1,12 +1,8 @@
-"use client";
 import React from "react";
-import {
-  motion,
-  AnimatePresence,
-} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "../../utils/cn";
 import Link from "next/link";
-
+import { Link as ScrollLink } from "react-scroll";
 
 export const FloatingNav = ({
   navItems,
@@ -19,6 +15,9 @@ export const FloatingNav = ({
   }[];
   className?: string;
 }) => {
+  const isHomePage =
+    typeof window !== "undefined" && window.location.pathname === "/";
+
   return (
     <AnimatePresence>
       <motion.div
@@ -39,16 +38,46 @@ export const FloatingNav = ({
         )}
       >
         {navItems.map((navItem: any, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="block text-sm">{navItem.name}</span>
-          </Link>
+          navItem.name === "Projects" ? (
+            isHomePage ? (
+              <ScrollLink
+                key={`link=${idx}`}
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                className={cn(
+                  "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                )}
+              >
+                <span className="block sm:hidden">{navItem.icon}</span>
+                <span className="block text-sm">{navItem.name}</span>
+              </ScrollLink>
+            ) : (
+              <a
+                key={`link=${idx}`}
+                href="/#projects" 
+                className={cn(
+                  "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                )}
+              >
+                <span className="block sm:hidden">{navItem.icon}</span>
+                <span className="block text-sm">{navItem.name}</span>
+              </a>
+            )
+          ) : (
+            <a
+              key={`link=${idx}`}
+              href={navItem.link}
+              className={cn(
+                "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              )}
+            >
+              <span className="block sm:hidden">{navItem.icon}</span>
+              <span className="block text-sm">{navItem.name}</span>
+            </a>
+          )
         ))}
         <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
           <span>Resume</span>

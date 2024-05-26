@@ -13,8 +13,8 @@ export function FloatingNavDemo() {
       link: "/"
     },
     {
-      name: "Pojects",
-      link: "/#projects"
+      name: "Projects",
+      link: "projects"
     },
     {
       name: "About",
