@@ -3,6 +3,7 @@ import React from "react";
 import { TypewriterEffectSmoothDemo } from "../typewriter-effect";
 import BasicTimeline from "../../../components/ui/Timeline";
 import Avatar from '@mui/material/Avatar';
+import { StickyScrollRevealDemo } from "./sticky-scroll-reveal"
 
 export function AboutPage() {
   return (
@@ -25,11 +26,18 @@ export function AboutPage() {
           Experience
       </div>
       
-      <div style={{ maxWidth: "80%"}}>
-        <BasicTimeline />
-
+      <div style={{ maxWidth: "80%", margin: "auto"}}>
+        {/* <BasicTimeline /> */}
+        <StickyScrollRevealDemo/>
       </div>
+
       
+
+      {/* Education */}
+      
+      <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
+          Education
+      </div>
 
       {/* Tech Stack */}
 

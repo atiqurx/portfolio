@@ -32,8 +32,8 @@ export default function RootLayout({
           <div className="flex justify-between lg:p-8 p-4 text-stone-300">
             {/* Copyright */}
             <div className="mr-5">
-              <h1>Atiqur Rahman</h1>
-              <p> &copy; 2024 Atiqur Rahman. All rights reserved.</p>
+              <h1>&copy; 2024 Atiqur Rahman.</h1>
+              <p>UI components by ui.aceternity.com. All rights reserved.</p>
             </div>
 
             {/* Social Media */}
