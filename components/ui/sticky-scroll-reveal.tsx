@@ -10,6 +10,7 @@ export const StickyScroll = ({
 }: {
   content: {
     title: string;
+    subtitle?: string; // Added subtitle here
     description: string;
     content?: React.ReactNode | any;
   }[];
@@ -73,6 +74,19 @@ export const StickyScroll = ({
               >
                 {item.title}
               </motion.h2>
+              {item.subtitle && (
+                <motion.h3
+                  initial={{
+                    opacity: 0,
+                  }}
+                  animate={{
+                    opacity: activeCard === index ? 1 : 0.3,
+                  }}
+                  className="text-xl font-semibold text-slate-200 mt-2"
+                >
+                  {item.subtitle}
+                </motion.h3>
+              )}
               <motion.p
                 initial={{
                   opacity: 0,
@@ -80,7 +94,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg text-slate-300 max-w-sm mt-10"
+                className="text-kg text-slate-300 max-w-sm mt-4"
               >
                 {item.description}
               </motion.p>
