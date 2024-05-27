@@ -5,10 +5,10 @@ import BasicTimeline from "../../../components/ui/Timeline";
 import Avatar from '@mui/material/Avatar';
 import { StickyScrollRevealDemo } from "./sticky-scroll-reveal"
 
-export function AboutPage() {
+const AboutPage: React.FC = () => {
   return (
     <section>
-        <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold" style={{ marginTop: "10rem", marginBottom: "2rem" }}>
+        <div className="text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold" style={{ marginTop: "10rem", marginBottom: "2rem" }}>
           About Me
         </div>
 
@@ -30,10 +30,8 @@ export function AboutPage() {
           </div>
         </div>
 
-
       {/* Experience Section */}
-
-      <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
+      <div className="text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
           Experience
       </div>
       
@@ -42,22 +40,17 @@ export function AboutPage() {
         <StickyScrollRevealDemo/>
       </div>
 
-      
-
       {/* Education */}
-      
-      {/* <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
+      {/* <div className="text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
           Education
-      </div>
-
-      Tech Stack
-
-      <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
-          Tech Stack
       </div> */}
 
-
+      {/* Tech Stack */}
+      {/* <div className="text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
+          Tech Stack
+      </div> */}
     </section>
   );
-}
+};
+
 export default AboutPage;
