@@ -12,13 +12,24 @@ export function AboutPage() {
           About Me
         </div>
 
-        <div className="flex justify-between w-3/4" style={{ gap: '2rem', margin: "auto" }}>
+        <div className="flex flex-col lg:flex-row justify-between w-3/4 mx-auto" style={{ gap: '2rem' }}>
           <TypewriterEffectSmoothDemo />
-
+          
           <div className="">
-            <Avatar className=" box-border" style={{ width:'14rem', height:'14rem', marginRight:'6rem', boxShadow: '0 0 2px 3px rgb(59 130 246)' }} alt="Atiqur Rahman" src="/atiq_bw.jpg" />
+            <Avatar
+              className="box-border"
+              style={{
+                width: '14rem',
+                height: '14rem',
+                margin: "auto",
+                boxShadow: '0 0 2px 3px rgb(59 130 246)',
+              }}
+              alt="Atiqur Rahman"
+              src="/atiq_bw.jpg"
+            />
           </div>
         </div>
+
 
       {/* Experience Section */}
 
@@ -26,7 +37,7 @@ export function AboutPage() {
           Experience
       </div>
       
-      <div style={{ maxWidth: "80%", margin: "auto"}}>
+      <div className="max-w-[90%] lg:max-w-[80%] mx-auto">
         {/* <BasicTimeline /> */}
         <StickyScrollRevealDemo/>
       </div>
@@ -35,15 +46,15 @@ export function AboutPage() {
 
       {/* Education */}
       
-      <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
+      {/* <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
           Education
       </div>
 
-      {/* Tech Stack */}
+      Tech Stack
 
       <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
           Tech Stack
-      </div>
+      </div> */}
 
 
     </section>
