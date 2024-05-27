@@ -37,7 +37,7 @@ export function AboutPage() {
           Experience
       </div>
       
-      <div className="max-w-[90%] lg:max-w-[80%] mx-auto">
+      <div className="max-w-[95%] lg:max-w-[80%] mx-auto">
         {/* <BasicTimeline /> */}
         <StickyScrollRevealDemo/>
       </div>
