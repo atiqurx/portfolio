@@ -11,7 +11,7 @@ export function AboutPage() {
           About Me
         </div>
 
-        <div className="flex justify-between w-11/12" style={{ gap: '2rem', margin: "auto" }}>
+        <div className="flex justify-between w-3/4" style={{ gap: '2rem', margin: "auto" }}>
           <TypewriterEffectSmoothDemo />
 
           <div className="">
@@ -25,7 +25,17 @@ export function AboutPage() {
           Experience
       </div>
       
-      <BasicTimeline />
+      <div style={{ maxWidth: "80%"}}>
+        <BasicTimeline />
+
+      </div>
+      
+
+      {/* Tech Stack */}
+
+      <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
+          Tech Stack
+      </div>
 
 
     </section>
