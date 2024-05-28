@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { TypewriterEffectSmoothDemo } from "../typewriter-effect";
-import BasicTimeline from "../../../components/ui/Timeline";
 import Avatar from '@mui/material/Avatar';
 import { StickyScrollRevealDemo } from "./sticky-scroll-reveal"
 
@@ -36,7 +35,6 @@ const AboutPage: React.FC = () => {
       </div>
       
       <div className="max-w-[95%] lg:max-w-[80%] mx-auto">
-        {/* <BasicTimeline /> */}
         <StickyScrollRevealDemo/>
       </div>
 
