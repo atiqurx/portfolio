@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const content = [
   {
-    title: "Supplemental Instruction Leader - CSE 1310",
+    title: "Supplemental Instruction Leader - CSE",
     subtitle: "UTA Academic Success Center",
     description:
       "Facilitated interactive group learning sessions for a cohort of 58 students in the Introduction to Programming course, reinforcing understanding of course material through engaging discussions and practical exercises. Enhanced student learning experience by integrating SI strategies, Bloom’s Taxonomy and Meta-cognition, into session plans; achieved a 40% increase in active participation.",
