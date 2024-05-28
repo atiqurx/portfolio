@@ -39,8 +39,8 @@ const AboutPage: React.FC = () => {
         <StickyScrollRevealDemo/>
       </div>
 
-      {/* Education */}
-      {/* <div className="text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
+      {/* Education
+      <div className="text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
           Education
       </div> */}
 

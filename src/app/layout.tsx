@@ -43,11 +43,11 @@ export default function RootLayout({
                   <FaGithub size={20} />
                 </a>
               </div>
-              <div className="mr-4">
+              {/* <div className="mr-4">
                 <a href="#" target="_blank" rel="noopener noreferrer">
                   <FaKaggle size={20} />
                 </a>
-              </div>
+              </div> */}
               <div>
                 <a href="https://www.linkedin.com/in/atiqurx" target="_blank" rel="noopener noreferrer">
                   <FaLinkedin size={20} />
