@@ -1,7 +1,7 @@
 import React from "react";
 import { Meteors } from "../../../components/ui/meteors";
 import { FaJs, FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
-import { SiC, SiCplusplus, SiTypescript, SiFirebase, SiSqlite} from 'react-icons/si';
+import { SiC, SiCplusplus, SiTypescript, SiFirebase, SiSqlite, SiNextdotjs} from 'react-icons/si';
 
 const programmingLanguages = [
     { name: "Python", icon: <FaPython /> },
@@ -11,7 +11,7 @@ const programmingLanguages = [
     { name: "C++", icon: <SiCplusplus /> },
     { name: "TypeScript", icon: <SiTypescript />},
     { name: "ReactJS", icon: <FaReact />},
-    { name: "NextJS", icon: <FaReact />},
+    { name: "NextJS", icon: <SiNextdotjs />},
     { name: "Firebase", icon: <SiFirebase />},
     { name: "SQL", icon: <SiSqlite />},
     { name: "HTML", icon: <FaHtml5 />},
