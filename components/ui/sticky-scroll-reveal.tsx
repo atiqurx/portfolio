@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "../../utils/cn";
+import { FaCalendarAlt } from "react-icons/fa";
 
 export const StickyScroll = ({
   content,
@@ -12,6 +13,7 @@ export const StickyScroll = ({
     title: string;
     subtitle?: string; // Added subtitle here
     description: string;
+    timeline?: string; // Add the timeline field
     content?: React.ReactNode | any;
   }[];
   contentClassName?: string;
@@ -98,6 +100,16 @@ export const StickyScroll = ({
               >
                 {item.description}
               </motion.p>
+              {item.timeline && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: activeCard === index ? 1 : 0.3 }}
+                  className="flex items-center text-md text-slate-400 mt-2"
+                >
+                  <FaCalendarAlt className="mr-2" /> {/* Calendar icon */}
+                  <span>{item.timeline}</span>
+                </motion.div>
+              )}
             </div>
           ))}
           <div className="h-40" />
