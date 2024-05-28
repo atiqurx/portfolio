@@ -3,6 +3,7 @@ import React from "react";
 import { TypewriterEffectSmoothDemo } from "../typewriter-effect";
 import Avatar from '@mui/material/Avatar';
 import { StickyScrollRevealDemo } from "./sticky-scroll-reveal"
+import { MeteorsDemo } from "./meteors"
 
 const AboutPage: React.FC = () => {
   return (
@@ -44,9 +45,10 @@ const AboutPage: React.FC = () => {
       </div> */}
 
       {/* Tech Stack */}
-      {/* <div className="text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
+      <div className="text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold" style={{ marginTop: "5rem", marginBottom: "2rem"}}>
           Tech Stack
-      </div> */}
+      </div>
+      <MeteorsDemo />
     </section>
   );
 };
