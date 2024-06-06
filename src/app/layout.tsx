@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { FloatingNavDemo } from "./floating-navbar";
-import { FaGithub, FaKaggle, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaKaggle, FaLinkedin } from "react-icons/fa";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,15 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.className} bg-black`}>
-
         <div>
           <FloatingNavDemo />
         </div>
-        
+
         {children}
 
         <footer className="w-11/12 min-h-48 mx-auto">
-          <hr className="border-t border-stone-600"/>
+          <hr className="border-t border-stone-600" />
 
           <div className="flex justify-between lg:p-8 p-4 text-stone-300">
             {/* Copyright */}
@@ -39,7 +38,11 @@ export default function RootLayout({
             {/* Social Media */}
             <div className="flex">
               <div className="mr-4">
-                <a href="https://github.com/atiqurx" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/atiqurx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaGithub size={20} />
                 </a>
               </div>
@@ -49,14 +52,17 @@ export default function RootLayout({
                 </a>
               </div> */}
               <div>
-                <a href="https://www.linkedin.com/in/atiqurx" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/atiqurx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FaLinkedin size={20} />
                 </a>
               </div>
             </div>
           </div>
         </footer>
-      
       </body>
     </html>
   );
