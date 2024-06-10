@@ -12,8 +12,8 @@ export default function Home() {
       imageUrl: "/srs-context.png",
       buttonText1: "",
       buttonLink1: "#",
-      buttonText2: "Demo Soon",
-      buttonLink2: "#",
+      buttonText2: "Github",
+      buttonLink2: "https://github.com/atiqurx/service-request-system",
     },
     {
       title: "UTA Datathon 2024 Website",
