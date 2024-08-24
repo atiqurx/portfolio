@@ -9,7 +9,7 @@ export default function Home() {
       title: "Trasva.com",
       description:
         "Trasva.com is a social platform designed for travelers to share and discover travel experiences. Users can create accounts to post about their journeys, upload images, and interact with the community through reactions, comments, and shares.",
-      imageUrl: "/",
+      imageUrl: "/trasva.png",
       buttonText1: "",
       buttonLink1: "#",
       buttonText2: "Website",
