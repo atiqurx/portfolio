@@ -6,14 +6,15 @@ import { ThreeDCardDemo } from "./3d-card";
 export default function Home() {
   const cards = [
     {
-      title: "Trasva.com",
+      title: "trasva.com",
       description:
-        "Trasva.com is a social platform designed for travelers to share and discover travel experiences. Users can create accounts to post about their journeys, upload images, and interact with the community through reactions, comments, and shares.",
+        "A travel social platform where users can share their journeys, discover new experiences, and connect with a like-minded community.",
       imageUrl: "/trasva.png",
       buttonText1: "",
       buttonLink1: "#",
       buttonText2: "Website",
       buttonLink2: "https://trasva.com/",
+      technologies: ["Next.js", "TypeScript", "Tailwind", "MongoDB", "Clerk"],
     },
     {
       title: "Service Request System",
@@ -24,6 +25,7 @@ export default function Home() {
       buttonLink1: "#",
       buttonText2: "Github",
       buttonLink2: "https://github.com/atiqurx/service-request-system",
+      technologies: ["Java", "Android Studio", "Firebase"],
     },
     {
       title: "UTA Datathon 2024 Website",
@@ -34,6 +36,12 @@ export default function Home() {
       buttonLink1: "https://utadatathon.tech",
       buttonText2: "Github",
       buttonLink2: "https://github.com/utadatathon/utadatathon2024-website",
+      technologies: [
+        "Next.js",
+        "Tailwind CSS",
+        "Firebase Firestore",
+        "Firebase Auth",
+      ],
     },
     {
       title: "Credit Card Fraud Detection",
@@ -45,16 +53,18 @@ export default function Home() {
       buttonText2: "Kaggle",
       buttonLink2:
         "https://www.kaggle.com/code/atiqurrahman75/credit-card-fraud-detection",
+      technologies: ["Python", "Pandas", "Scikit-Learn"],
     },
     {
       title: "CBRE Asset Management",
       description:
-        "A machine learning model that predicts the maintenance needs in commercial building assets",
+        "A machine learning model that predicts the maintenance needs in commercial building assets.",
       imageUrl: "/cbre.jpg",
       buttonText1: "",
       buttonLink1: "#",
       buttonText2: "Github",
       buttonLink2: "https://github.com/atiqurx/cbre_asset_condition_monitor",
+      technologies: ["Python", "Random Forest", "K-means"],
     },
   ];
 
@@ -78,6 +88,7 @@ export default function Home() {
               buttonLink1={card.buttonLink1}
               buttonText2={card.buttonText2}
               buttonLink2={card.buttonLink2}
+              technologies={card.technologies}
             />
           ))}
         </div>
