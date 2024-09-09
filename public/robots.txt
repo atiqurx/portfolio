@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://atiqurx.com
+
+# Sitemaps
+Sitemap: https://atiqurx.com/sitemap.xml

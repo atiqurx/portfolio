@@ -4,6 +4,12 @@ import { TypewriterEffectSmoothDemo } from "../typewriter-effect";
 import Avatar from '@mui/material/Avatar';
 import { StickyScrollRevealDemo } from "./sticky-scroll-reveal"
 import { MeteorsDemo } from "./meteors"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "Computer Science Student a University of Texas at Arlington."
+}
 
 const AboutPage: React.FC = () => {
   return (

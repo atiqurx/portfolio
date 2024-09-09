@@ -7,8 +7,11 @@ import { FaGithub, FaKaggle, FaLinkedin } from "react-icons/fa";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Atiqur Rahman",
-  description: "Atiqur Rahman Portfolio",
+  title: {
+    default: "Atiqur Rahman",
+    template: "%s - Atiqur Rahman"
+  },
+  description: "Portfolio of Atiqur Rahman. Software Engineering Projects and Work Experiences.",
 };
 
 export default function RootLayout({
