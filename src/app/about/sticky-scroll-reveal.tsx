@@ -12,7 +12,7 @@ const content = [
     timeline: "Aug. 2023 - Present",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        CSE 1310
+        CSE 1320
       </div>
     ),
   },
@@ -21,7 +21,7 @@ const content = [
     subtitle: "UTA Datathon",
     description:
       "Designed and developed a responsive website for UTA Datathon 2024, resulting in a 60% increase in participant registration and improved sponsor information access. Spearheaded the integration of Firebase into the website development process, streamlining data handling and improving analytics by 30%. Directed the development team, ensuring project completion and success, resulting in positive feedback from participants and sponsors.",
-      timeline: "Feb. 2024 - Apr. 2024",
+    timeline: "Feb. 2024 - Apr. 2024",
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
@@ -39,7 +39,7 @@ const content = [
     subtitle: "UTA New Maverick Orientation",
     description:
       "Successfully staffed 30+ Orientations for the 2023 Summer and Fall Semesters, welcoming and supporting over 10,000 students and guests at UTA to foster a strong sense of belonging within the university community. Collaborated with a team of 35+ Orientation Leaders to curate and deliver orientation activities including Small Group sessions, Guest Reception, and Evening Entertainment programs, resulting in a 25% increase in student involvement.",
-      timeline: "Jan. 2023 - Aug. 2023",
+    timeline: "Jan. 2023 - Aug. 2023",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
         <Image
