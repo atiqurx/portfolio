@@ -44,6 +44,17 @@ export default function Home() {
       ],
     },
     {
+      title: "ACM UTA Website",
+      description:
+        "Official website of Association for Computing Machinery (ACM) @ UTA.",
+      imageUrl: "/acm-uta-ss.png",
+      buttonText1: "Website",
+      buttonLink1: "https://acmuta.com",
+      buttonText2: "Github",
+      buttonLink2: "https://github.com/acmuta/acmuta-site",
+      technologies: ["Next.js", "Tailwind CSS", "Firebase Firestore"],
+    },
+    {
       title: "Credit Card Fraud Detection",
       description:
         "Exploratory data analysis and prediction model for credit card fraud detection.",
