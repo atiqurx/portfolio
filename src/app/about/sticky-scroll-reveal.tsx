@@ -5,14 +5,38 @@ import Image from "next/image";
 
 const content = [
   {
+    title: "Director - ACM Create",
+    subtitle: "ACM @ UTA",
+    description:
+      "Lead the development of software projects, including websites and applications, while managing a team of officers and overseeing project completion. Coordinate weekly meetings, ensuring the successful execution of initiatives like the official ACM website, UTA Grades site and a roommate matching app.",
+    timeline: "Aug. 2024 - Present",
+    content: (
+      <div className="h-full w-full  flex items-center justify-center text-white">
+        <Image
+          src="/acm-team.JPG"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="ACM UTA Team"
+        />
+      </div>
+    ),
+  },
+  {
     title: "Supplemental Instruction Leader - CSE",
     subtitle: "UTA Academic Success Center",
     description:
       "Facilitated interactive group learning sessions for a cohort of 58 students in the Introduction to Programming course, reinforcing understanding of course material through engaging discussions and practical exercises. Enhanced student learning experience by integrating SI strategies, Bloom’s Taxonomy and Meta-cognition, into session plans; achieved a 40% increase in active participation.",
     timeline: "Aug. 2023 - Present",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        CSE 1320
+      <div className="h-full w-full  flex items-center justify-center text-white">
+        <Image
+          src="/si-asc.jpg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="SI Leaders"
+        />
       </div>
     ),
   },
@@ -29,7 +53,7 @@ const content = [
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="linear board demo"
+          alt="UTA Datathon Website 2024"
         />
       </div>
     ),
@@ -47,7 +71,7 @@ const content = [
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="linear board demo"
+          alt="UTA Orientation Leaders 2023"
         />
       </div>
     ),
