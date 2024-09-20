@@ -8,6 +8,7 @@ import {
   SiSqlite,
   SiNextdotjs,
   SiMongodb,
+  SiCsharp,
   SiAmazonaws,
   SiDocker,
   SiTensorflow,
@@ -16,7 +17,7 @@ import {
   SiLinux,
   SiDjango,
   SiFlask,
-  SiR,
+  SiMicrosoftazure,
 } from "react-icons/si";
 import {
   FaPython,
@@ -37,8 +38,9 @@ const programmingLanguagesAndTechnologies = [
   { name: "Python", icon: <FaPython /> },
   { name: "C", icon: <SiC /> },
   { name: "Java", icon: <FaJava /> },
-  { name: "JavaScript", icon: <FaJs /> },
+  { name: "C#", icon: <SiCsharp /> },
   { name: "C++", icon: <SiCplusplus /> },
+  { name: "JavaScript", icon: <FaJs /> },
   { name: "TypeScript", icon: <SiTypescript /> },
   { name: "ReactJS", icon: <FaReact /> },
   { name: "NextJS", icon: <SiNextdotjs /> },
@@ -46,6 +48,7 @@ const programmingLanguagesAndTechnologies = [
   { name: "SQL", icon: <SiSqlite /> },
   { name: "NoSQL", icon: <FaDatabase /> },
   { name: "MongoDB", icon: <SiMongodb /> },
+  { name: "Azure", icon: <SiMicrosoftazure /> },
   { name: "AWS", icon: <FaAws /> },
   { name: "Docker", icon: <SiDocker /> },
   { name: "TensorFlow", icon: <SiTensorflow /> },
@@ -63,7 +66,7 @@ const programmingLanguagesAndTechnologies = [
 export function MeteorsDemo() {
   return (
     <div className="">
-      <div className="relative w-[90%] lg:w-[60%] my-12 mx-auto">
+      <div className="relative w-[90%] lg:w-[60%] my-12 mx-auto ">
         <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
         <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-6 text-white z-50 m-auto">
