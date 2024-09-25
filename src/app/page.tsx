@@ -44,6 +44,17 @@ export default function Home() {
       ],
     },
     {
+      title: "Goblin",
+      description:
+        "A robust expense management web app built with .NET, designed to streamline tracking, managing, and analyzing your financial transactions effortlessly.",
+      imageUrl: "/goblin.png",
+      buttonText1: "Website",
+      buttonLink1: "https://gob-lin-bkeneab8ccdmhhda.centralus-01.azurewebsites.net/",
+      buttonText2: "Github",
+      buttonLink2: "https://github.com/atiqurx/goblin",
+      technologies: ["C#", "ASP.NET", "SQL", "Azure", "Docker"],
+    },
+    {
       title: "ACM UTA Website",
       description:
         "Official website of Association for Computing Machinery (ACM) @ UTA.",
