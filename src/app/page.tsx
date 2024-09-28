@@ -2,6 +2,7 @@
 import React from "react";
 import { SparklesPreview } from "./sparkles";
 import { ThreeDCardDemo } from "./3d-card";
+import CommitsTable from "../../components/ui/commitsTable";
 
 export default function Home() {
   const cards = [
@@ -113,6 +114,9 @@ export default function Home() {
               technologies={card.technologies}
             />
           ))}
+        </div>
+        <div className="max-w-[95%] lg:max-w-[80%] mx-auto">
+          <CommitsTable />
         </div>
       </section>
     </main>
