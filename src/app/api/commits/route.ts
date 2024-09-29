@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-const GITHUB_USERNAME = 'atiqurx';
-const GITHUB_TOKEN = process.env.MY_GITHUB_TOKEN; 
+const GITHUB_USERNAME = "atiqurx";
+const GITHUB_TOKEN = process.env.MY_GITHUB_TOKEN;
 
 export async function GET() {
   const headers = {
@@ -9,55 +9,116 @@ export async function GET() {
   };
 
   try {
-    // Fetching repositories
-    const repoResponse = await fetch(`https://api.github.com/user/repos?per_page=100`, { headers });
-    
-    if (!repoResponse.ok) {
-      console.error("Failed to fetch repositories:", repoResponse.status, repoResponse.statusText);
-      return NextResponse.json({ message: 'Error fetching repositories' }, { status: 500 });
+    // Fetching organization events
+    const eventsResponse = await fetch(
+      `https://api.github.com/users/${GITHUB_USERNAME}/events?per_page=100`,
+      { headers }
+    );
+
+    if (!eventsResponse.ok) {
+      console.error(
+        "Failed to fetch organization events:",
+        eventsResponse.status,
+        eventsResponse.statusText
+      );
+      return NextResponse.json(
+        { message: "Error fetching organization events" },
+        { status: 500 }
+      );
     }
 
-    const repositories = await repoResponse.json();
+    const events = await eventsResponse.json();
 
-    // Fetching commits for each repository
-    const commitPromises = repositories.map(async (repo: any) => {
-      const commitResponse = await fetch(
-        `https://api.github.com/repos/${repo.full_name}/commits?author=${GITHUB_USERNAME}`,
-        { headers }
-      );
+    // Mapping event data to a structured format
+    const mappedEvents = events.map((event: any) => {
+      let eventData: any = {
+        type: event.type,
+        repoName: event.repo.name,
+        repoUrl: event.repo.html_url,
+        createdDate: event.created_at,
+      };
 
-      if (!commitResponse.ok) {
-        console.error(`Failed to fetch commits for ${repo.name}:`, commitResponse.status, commitResponse.statusText);
-        return [];
+      // Handling different event types
+      if (event.type === "PushEvent") {
+        eventData = {
+          ...eventData,
+          authorName: event.actor.login,
+          authorUrl: event.actor.url,
+        };
+      } else if (event.type === "PullRequestEvent") {
+        eventData = {
+          ...eventData,
+          title: event.payload.pull_request.title,
+          state: event.payload.pull_request.state,
+          authorName: event.payload.pull_request.user.login,
+          authorUrl: event.payload.pull_request.user.html_url,
+        };
+      } else if (event.type === "IssuesEvent") {
+        eventData = {
+          ...eventData,
+          title: event.payload.issue.title,
+          state: event.payload.issue.state,
+          authorName: event.payload.issue.user.login,
+          authorUrl: event.payload.issue.user.html_url,
+        };
+      } else if (event.type === "ForkEvent") {
+        eventData = {
+          ...eventData,
+          forkedRepoName: event.payload.forkee.full_name,
+          forkedRepoUrl: event.payload.forkee.html_url,
+          authorName: event.actor.login,
+          authorUrl: event.actor.html_url,
+        };
+      } else if (event.type === "PullRequestReviewEvent") {
+        eventData = {
+          ...eventData,
+          reviewState: event.payload.review.state,
+          pullRequestTitle: event.payload.pull_request.title,
+          pullRequestUrl: event.payload.pull_request.html_url,
+          authorName: event.actor.login,
+          authorUrl: event.actor.html_url,
+        };
+      } else if (event.type === "PullRequestReviewCommentEvent") {
+        eventData = {
+          ...eventData,
+          commentBody: event.payload.comment.body,
+          pullRequestTitle: event.payload.pull_request.title,
+          pullRequestUrl: event.payload.pull_request.html_url,
+          authorName: event.actor.login,
+          authorUrl: event.actor.html_url,
+        };
       }
 
-      const commits = await commitResponse.json();
-      return commits.map((commit: any) => ({
-        repoName: repo.name,
-        repoUrl: repo.private ? "private" : repo.html_url, 
-        commitMessage: commit.commit.message,
-        commitDate: commit.commit.author.date,
-        isPrivate: repo.private, 
-      }));
+      return eventData;
     });
 
-    const allCommits = await Promise.all(commitPromises);
-    const flattenedCommits = allCommits.flat();
+    // Sort events by date in descending order
+    const sortedEvents = mappedEvents.sort(
+      (a: any, b: any) =>
+        new Date(b.createdDate).getTime() - new Date(a.createdDate).getTime()
+    );
 
-    // Sort commits by date in descending order
-    const sortedCommits = flattenedCommits.sort((a, b) => new Date(b.commitDate).getTime() - new Date(a.commitDate).getTime());
+    // Remove duplicates based on title/message, repoName, and createdDate
+    const uniqueEvents = Array.from(
+      new Map(
+        sortedEvents.map((event: any) => [
+          `${event.title || event.message}|${event.repoName}|${
+            event.createdDate
+          }`,
+          event,
+        ])
+      ).values()
+    );
 
-    // Remove duplicates based on commitMessage, repoName, and commitDate
-    const uniqueCommits = Array.from(new Map(sortedCommits.map(commit => [
-      `${commit.commitMessage}|${commit.repoName}|${commit.commitDate}`, commit
-    ])).values());
+    // Take the latest 10 unique events
+    const latestEvents = uniqueEvents.slice(0, 10);
 
-    // Take the latest 10 unique commits
-    const latestCommits = uniqueCommits.slice(0, 10); 
-
-    return NextResponse.json(latestCommits);
+    return NextResponse.json(latestEvents);
   } catch (error) {
-    console.error("Error fetching commits:", error);
-    return NextResponse.json({ message: 'Error fetching commits', error: (error as Error).message }, { status: 500 });
+    console.error("Error fetching events:", error);
+    return NextResponse.json(
+      { message: "Error fetching events", error: (error as Error).message },
+      { status: 500 }
+    );
   }
 }
