@@ -30,67 +30,69 @@ export async function GET() {
     const events = await eventsResponse.json();
 
     // Mapping event data to a structured format
-    const mappedEvents = events.map((event: any) => {
-      let eventData: any = {
-        type: event.type,
-        repoName: event.repo.name,
-        repoUrl: event.repo.html_url,
-        createdDate: event.created_at,
-      };
+    const mappedEvents = events
+      .map((event: any) => {
+        let eventData: any = {
+          type: event.type,
+          repoName: event.repo.name,
+          repoUrl: event.repo.html_url,
+          createdDate: event.created_at,
+        };
 
-      // Handling different event types
-      if (event.type === "PushEvent") {
-        eventData = {
-          ...eventData,
-          authorName: event.actor.login,
-          authorUrl: event.actor.url,
-        };
-      } else if (event.type === "PullRequestEvent") {
-        eventData = {
-          ...eventData,
-          title: event.payload.pull_request.title,
-          state: event.payload.pull_request.state,
-          authorName: event.payload.pull_request.user.login,
-          authorUrl: event.payload.pull_request.user.html_url,
-        };
-      } else if (event.type === "IssuesEvent") {
-        eventData = {
-          ...eventData,
-          title: event.payload.issue.title,
-          state: event.payload.issue.state,
-          authorName: event.payload.issue.user.login,
-          authorUrl: event.payload.issue.user.html_url,
-        };
-      } else if (event.type === "ForkEvent") {
-        eventData = {
-          ...eventData,
-          forkedRepoName: event.payload.forkee.full_name,
-          forkedRepoUrl: event.payload.forkee.html_url,
-          authorName: event.actor.login,
-          authorUrl: event.actor.html_url,
-        };
-      } else if (event.type === "PullRequestReviewEvent") {
-        eventData = {
-          ...eventData,
-          reviewState: event.payload.review.state,
-          pullRequestTitle: event.payload.pull_request.title,
-          pullRequestUrl: event.payload.pull_request.html_url,
-          authorName: event.actor.login,
-          authorUrl: event.actor.html_url,
-        };
-      } else if (event.type === "PullRequestReviewCommentEvent") {
-        eventData = {
-          ...eventData,
-          commentBody: event.payload.comment.body,
-          pullRequestTitle: event.payload.pull_request.title,
-          pullRequestUrl: event.payload.pull_request.html_url,
-          authorName: event.actor.login,
-          authorUrl: event.actor.html_url,
-        };
-      }
+        // Handling different event types
+        if (event.type === "PushEvent") {
+          eventData = {
+            ...eventData,
+            authorName: event.actor.login,
+            authorUrl: event.actor.url,
+          };
+        } else if (event.type === "PullRequestEvent") {
+          eventData = {
+            ...eventData,
+            title: event.payload.pull_request.title,
+            state: event.payload.pull_request.state,
+            authorName: event.payload.pull_request.user.login,
+            authorUrl: event.payload.pull_request.user.html_url,
+          };
+        } else if (event.type === "IssuesEvent") {
+          eventData = {
+            ...eventData,
+            title: event.payload.issue.title,
+            state: event.payload.issue.state,
+            authorName: event.payload.issue.user.login,
+            authorUrl: event.payload.issue.user.html_url,
+          };
+        } else if (event.type === "ForkEvent") {
+          eventData = {
+            ...eventData,
+            forkedRepoName: event.payload.forkee.full_name,
+            forkedRepoUrl: event.payload.forkee.html_url,
+            authorName: event.actor.login,
+            authorUrl: event.actor.html_url,
+          };
+        } else if (event.type === "PullRequestReviewEvent") {
+          eventData = {
+            ...eventData,
+            reviewState: event.payload.review.state,
+            pullRequestTitle: event.payload.pull_request.title,
+            pullRequestUrl: event.payload.pull_request.html_url,
+            authorName: event.actor.login,
+            authorUrl: event.actor.html_url,
+          };
+        } else if (event.type === "PullRequestReviewCommentEvent") {
+          eventData = {
+            ...eventData,
+            commentBody: event.payload.comment.body,
+            pullRequestTitle: event.payload.pull_request.title,
+            pullRequestUrl: event.payload.pull_request.html_url,
+            authorName: event.actor.login,
+            authorUrl: event.actor.html_url,
+          };
+        }
 
-      return eventData;
-    });
+        return eventData;
+      })
+      .filter((event: any) => event.authorName === GITHUB_USERNAME);
 
     // Sort events by date in descending order
     const sortedEvents = mappedEvents.sort(
