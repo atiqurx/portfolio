@@ -2,6 +2,7 @@
 import React from "react";
 import { SparklesPreview } from "./sparkles";
 import { ThreeDCardDemo } from "./3d-card";
+import CommitsTable from "../../components/ui/commitsTable";
 
 export default function Home() {
   const cards = [
@@ -49,7 +50,8 @@ export default function Home() {
         "A robust expense management web app built with .NET, designed to streamline tracking, managing, and analyzing your financial transactions effortlessly.",
       imageUrl: "/goblin.png",
       buttonText1: "Website",
-      buttonLink1: "https://gob-lin-bkeneab8ccdmhhda.centralus-01.azurewebsites.net/",
+      buttonLink1:
+        "https://gob-lin-bkeneab8ccdmhhda.centralus-01.azurewebsites.net/",
       buttonText2: "Github",
       buttonLink2: "https://github.com/atiqurx/goblin",
       technologies: ["C#", "ASP.NET", "SQL", "Azure", "Docker"],
@@ -113,6 +115,9 @@ export default function Home() {
               technologies={card.technologies}
             />
           ))}
+        </div>
+        <div className="mx-auto">
+          <CommitsTable />
         </div>
       </section>
     </main>
