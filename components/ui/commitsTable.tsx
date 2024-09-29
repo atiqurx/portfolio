@@ -81,7 +81,7 @@ const CommitsTable: React.FC = () => {
         <p>No recent events found.</p>
       ) : (
         <div className="min-w-full text-stone-300 text-sm border border-white/[0.2] h-auto rounded-xl p-6">
-          <table>
+          <table className="mx-auto">
             <thead className=""></thead>
             <tbody>
               {events.map((event, index) => (
@@ -111,6 +111,17 @@ const CommitsTable: React.FC = () => {
                   </td>
                 </tr>
               ))}
+              <tr>
+                <td className="py-4 px-2">
+                  <a
+                    href="https://github.com/atiqurx"
+                    target="_blank"
+                    className="hover:underline"
+                  >
+                    Show More Contributions..{" "}
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
