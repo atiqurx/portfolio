@@ -1,10 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { SparklesPreview } from "./sparkles";
 import { ThreeDCardDemo } from "./3d-card";
 import CommitsTable from "../../components/ui/commitsTable";
 
 export default function Home() {
+  const [selectedTech, setSelectedTech] = useState<string[]>([]);
+
   const cards = [
     {
       title: "trasva.com",
@@ -15,7 +17,13 @@ export default function Home() {
       buttonLink1: "#",
       buttonText2: "Website",
       buttonLink2: "https://trasva.com/",
-      technologies: ["Next.js", "TypeScript", "Tailwind", "MongoDB", "Clerk"],
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "MongoDB",
+        "Clerk",
+      ],
     },
     {
       title: "Service Request System",
@@ -39,9 +47,10 @@ export default function Home() {
       buttonLink2: "https://github.com/utadatathon/utadatathon2024-website",
       technologies: [
         "Next.js",
+        "TypeScript",
         "Tailwind CSS",
-        "Firebase Firestore",
-        "Firebase Auth",
+        "Firebase",
+        "Vercel",
       ],
     },
     {
@@ -54,7 +63,7 @@ export default function Home() {
         "https://gob-lin-bkeneab8ccdmhhda.centralus-01.azurewebsites.net/",
       buttonText2: "Github",
       buttonLink2: "https://github.com/atiqurx/goblin",
-      technologies: ["C#", "ASP.NET", "SQL", "Azure", "Docker"],
+      technologies: ["C#", ".NET", "SQL", "Azure", "Docker"],
     },
     {
       title: "ACM UTA Website",
@@ -65,7 +74,12 @@ export default function Home() {
       buttonLink1: "https://acmuta.com",
       buttonText2: "Github",
       buttonLink2: "https://github.com/acmuta/acmuta-site",
-      technologies: ["Next.js", "Tailwind CSS", "Firebase Firestore"],
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Firebase Firestore",
+      ],
     },
     {
       title: "Credit Card Fraud Detection",
@@ -92,17 +106,66 @@ export default function Home() {
     },
   ];
 
+  const availableTechnologies = [
+    "Python",
+    "C#",
+    "Java",
+    "TypeScript",
+    "Next.js",
+    ".NET",
+    "SQL",
+    "MongoDB",
+    "Firebase",
+  ];
+
+  // Handle technology filter toggle
+  const toggleTechnology = (tech: string) => {
+    if (selectedTech.includes(tech)) {
+      setSelectedTech(selectedTech.filter((t) => t !== tech));
+    } else {
+      setSelectedTech([...selectedTech, tech]);
+    }
+  };
+
+  // Filter cards based on selected technologies
+  const filteredCards = selectedTech.length
+    ? cards.filter((card) =>
+        selectedTech.some((tech) => card.technologies.includes(tech))
+      )
+    : cards;
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between main">
       <SparklesPreview />
 
       <section id="projects" className="p-5">
-        <div className=" text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
+        <div className="text-[3rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold">
           Explore Projects
         </div>
+        <h4 className="my-4 text-neutral-500 text-sm text-center display-block ">
+          Filter by Tech
+        </h4>
 
+        {/* Filter Buttons */}
+        <div className="w-full flex justify-center mb-7">
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-8 gap-2">
+            {availableTechnologies.map((tech) => (
+              <button
+                key={tech}
+                className={`border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full ${
+                  selectedTech.includes(tech) ? "bg-blue-500 text-white" : ""
+                }`}
+                onClick={() => toggleTechnology(tech)}
+              >
+                {tech}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Display filtered cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-5">
-          {cards.map((card, index) => (
+          {filteredCards.map((card, index) => (
             <ThreeDCardDemo
               key={index}
               title={card.title}
