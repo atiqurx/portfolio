@@ -9,6 +9,18 @@ export default function Home() {
 
   const cards = [
     {
+      title: "LegalAI",
+      description:
+        "LegalAI is an AI platform that simplifies legal document review by summarizing contracts, spotting risks, and offering key insights with advanced language models.",
+      imageUrl: "/legalai.png",
+      buttonText1: "",
+      buttonLink1: "#",
+      buttonText2: "Github",
+      buttonLink2: "https://github.com/atiqurx/legalAI",
+      technologies: ["Next.js", "TypeScript", "Tailwind", "MongoDB", "PropelAuth", "UploadThing", "Open AI"],
+      badge: "HackSMU VI Winner", 
+    },
+    {
       title: "trasva.com",
       description:
         "A travel social platform where users can share their journeys, discover new experiences, and connect with a like-minded community.",
@@ -176,6 +188,7 @@ export default function Home() {
               buttonText2={card.buttonText2}
               buttonLink2={card.buttonLink2}
               technologies={card.technologies}
+              badge={card.badge} 
             />
           ))}
         </div>
