@@ -9,6 +9,18 @@ export default function Home() {
 
   const cards = [
     {
+      title: "Waste.0",
+      description:
+        "Waste.0 is a web app designed to reduce food waste by using machine learning to predict optimal inventory levels and forecast item spoilage, minimizing surplus and waste.",
+      imageUrl: "/waste.0.png",
+      buttonText1: "",
+      buttonLink1: "#",
+      buttonText2: "Github",
+      buttonLink2: "https://github.com/atiqurx/waste.0",
+      technologies: ["Next.js", "TypeScript", "Tailwind", "MongoDB", "Databricks", "AWS", "Streamlit", "Clerk"],
+      badge: "HackUTA 6 Winner", 
+    },
+    {
       title: "LegalAI",
       description:
         "LegalAI is an AI platform that simplifies legal document review by summarizing contracts, spotting risks, and offering key insights with advanced language models.",
@@ -128,6 +140,8 @@ export default function Home() {
     "SQL",
     "MongoDB",
     "Firebase",
+    "Azure", 
+    "AWS"
   ];
 
   // Handle technology filter toggle
