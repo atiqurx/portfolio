@@ -5,6 +5,25 @@ import Image from "next/image";
 
 const content = [
   {
+    title: "Web Developer",
+    subtitle: "UTA Office of Information Technology",
+    description:
+      "Web Publishing Services.",
+    timeline: "Oct. 2024 - Present",
+    content: (
+      <div className="h-full w-full  flex items-center justify-center text-white">
+        {/* <Image
+          src="/acm-team.JPG"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="ACM UTA Team"
+        /> */}
+        UTA OIT
+      </div>
+    ),
+  },
+  {
     title: "Director - ACM Create",
     subtitle: "ACM @ UTA",
     description:
@@ -27,7 +46,7 @@ const content = [
     subtitle: "UTA Academic Success Center",
     description:
       "Facilitated interactive group learning sessions for a cohort of 58 students in the Introduction to Programming course, reinforcing understanding of course material through engaging discussions and practical exercises. Enhanced student learning experience by integrating SI strategies, Bloom’s Taxonomy and Meta-cognition, into session plans; achieved a 40% increase in active participation.",
-    timeline: "Aug. 2023 - Present",
+    timeline: "Aug. 2023 - Oct. 2023",
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
