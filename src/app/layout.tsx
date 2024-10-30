@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { FloatingNavDemo } from "./floating-navbar";
 import { FaGithub, FaKaggle, FaLinkedin } from "react-icons/fa";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+      {/* <!-- Google tag (gtag.js) --> */}
+        <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-DN94C9WQ9B"
+        strategy="afterInteractive"
+      />
+      
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DN94C9WQ9B');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.className} bg-black`}>
         <div>
           <FloatingNavDemo />
