@@ -4,6 +4,7 @@ module.exports = {
     sitemapSize: 5000,                 
   additionalPaths: async (config) => [
     await config.transform(config, '/resume'),
+    await config.transform(config, '/#projects'), 
   ],
   transform: async (config, path) => {
     // Custom rules for specific paths if needed
@@ -12,6 +13,13 @@ module.exports = {
         loc: path, 
         changefreq: 'daily',
         priority: 0.5,
+        lastmod: new Date().toISOString(),
+      };
+    } else if (path === '/#projects') {
+      return {
+        loc: path,
+        changefreq: 'daily', 
+        priority: 0.6,
         lastmod: new Date().toISOString(),
       };
     }
