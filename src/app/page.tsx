@@ -9,6 +9,18 @@ export default function Home() {
 
   const cards = [
     {
+    title: "FleetPulse",
+    description:
+      "FleetPulse is a data visualization tool designed to help companies reduce carbon emissions for their truck and vehicle fleets.",
+    imageUrl: "/fleetpulse.png",
+    buttonText1: "",
+    buttonLink1: "#",
+    buttonText2: "Devpost",
+    buttonLink2: "https://devpost.com/software/fleetpulse?ref_content=my-projects-tab&ref_feature=my_projects",
+    technologies: ["Next.js", "TypeScript", "Tailwind", "Cloudflare", "Databricks", "AWS", "Clerk"],
+    badge: "HackTX 2024 Winner", 
+  },
+    {
       title: "Waste.0",
       description:
         "Waste.0 is a web app designed to reduce food waste by using machine learning to predict optimal inventory levels and forecast item spoilage, minimizing surplus and waste.",
@@ -31,6 +43,22 @@ export default function Home() {
       buttonLink2: "https://github.com/atiqurx/legalAI",
       technologies: ["Next.js", "TypeScript", "Tailwind", "MongoDB", "PropelAuth", "UploadThing", "Open AI"],
       badge: "HackSMU VI Winner", 
+    },
+    {
+      title: "MavGrades",
+      description:
+        "MavGrades is a platform that provides grade distributions for UTA courses and professors, helping students make informed class choices.",
+      imageUrl: "/mavgrades.png",
+      buttonText1: "Github",
+      buttonLink1: "https://github.com/acmuta/mavgrades",
+      buttonText2: "Website",
+      buttonLink2: "https://mavgrades.com/",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "SQLite",
+      ],
     },
     {
       title: "trasva.com",
