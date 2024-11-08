@@ -18,7 +18,8 @@ import {
   SiDjango,
   SiFlask,
   SiMicrosoftazure,
-  SiDatabricks
+  SiDatabricks,
+  SiCloudflare
 } from "react-icons/si";
 import {
   FaPython,
@@ -53,6 +54,7 @@ const programmingLanguagesAndTechnologies = [
   { name: "AWS", icon: <FaAws /> },
   { name: "Docker", icon: <SiDocker /> },
   { name: "Databricks", icon: <SiDatabricks />},
+  { name: "Cloudflare", icon: <SiCloudflare /> },
   { name: "TensorFlow", icon: <SiTensorflow /> },
   { name: "OpenCV", icon: <SiOpencv /> },
   { name: "Android Studio", icon: <SiAndroidstudio /> },

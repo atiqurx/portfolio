@@ -8,7 +8,7 @@ const content = [
     title: "Web Developer",
     subtitle: "UTA Office of Information Technology",
     description:
-      "Web Publishing Services.",
+      "Manage content updates for university websites using WordPress, Sitecore, and Cascade, optimizing images and scripts to enhance site performance by 20%. Resolve weekly web publishing requests via ServiceNow, adhering to ITIL standards by troubleshooting code errors and optimizing server configurations, achieving 95% SLA compliance.",
     timeline: "Oct. 2024 - Present",
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
