@@ -2,24 +2,33 @@
 import React, { useState } from "react";
 import { SparklesPreview } from "./sparkles";
 import { ThreeDCardDemo } from "./3d-card";
-import CommitsTable from "../../components/ui/commitsTable";
+// import CommitsTable from "../../components/ui/commitsTable";
 
 export default function Home() {
   const [selectedTech, setSelectedTech] = useState<string[]>([]);
 
   const cards = [
     {
-    title: "FleetPulse",
-    description:
-      "FleetPulse is a data visualization tool designed to help companies reduce carbon emissions for their truck and vehicle fleets.",
-    imageUrl: "/fleetpulse.png",
-    buttonText1: "",
-    buttonLink1: "#",
-    buttonText2: "Devpost",
-    buttonLink2: "https://devpost.com/software/fleetpulse?ref_content=my-projects-tab&ref_feature=my_projects",
-    technologies: ["Next.js", "TypeScript", "Tailwind", "Cloudflare", "Databricks", "AWS", "Clerk"],
-    badge: "HackTX 2024 Winner", 
-  },
+      title: "FleetPulse",
+      description:
+        "FleetPulse is a data visualization tool designed to help companies reduce carbon emissions for their truck and vehicle fleets.",
+      imageUrl: "/fleetpulse.png",
+      buttonText1: "",
+      buttonLink1: "#",
+      buttonText2: "Devpost",
+      buttonLink2:
+        "https://devpost.com/software/fleetpulse?ref_content=my-projects-tab&ref_feature=my_projects",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "Cloudflare",
+        "Databricks",
+        "AWS",
+        "Clerk",
+      ],
+      badge: "HackTX 2024 Winner",
+    },
     {
       title: "Waste.0",
       description:
@@ -29,8 +38,17 @@ export default function Home() {
       buttonLink1: "#",
       buttonText2: "Github",
       buttonLink2: "https://github.com/atiqurx/waste.0",
-      technologies: ["Next.js", "TypeScript", "Tailwind", "MongoDB", "Databricks", "AWS", "Streamlit", "Clerk"],
-      badge: "HackUTA 6 Winner", 
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "MongoDB",
+        "Databricks",
+        "AWS",
+        "Streamlit",
+        "Clerk",
+      ],
+      badge: "HackUTA 6 Winner",
     },
     {
       title: "LegalAI",
@@ -41,8 +59,16 @@ export default function Home() {
       buttonLink1: "#",
       buttonText2: "Github",
       buttonLink2: "https://github.com/atiqurx/legalAI",
-      technologies: ["Next.js", "TypeScript", "Tailwind", "MongoDB", "PropelAuth", "UploadThing", "Open AI"],
-      badge: "HackSMU VI Winner", 
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "MongoDB",
+        "PropelAuth",
+        "UploadThing",
+        "Open AI",
+      ],
+      badge: "HackSMU VI Winner",
     },
     {
       title: "MavGrades",
@@ -53,12 +79,7 @@ export default function Home() {
       buttonLink1: "https://github.com/acmuta/mavgrades",
       buttonText2: "Website",
       buttonLink2: "https://mavgrades.com/",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "SQLite",
-      ],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "SQLite"],
     },
     {
       title: "trasva.com",
@@ -168,8 +189,8 @@ export default function Home() {
     "SQL",
     "MongoDB",
     "Firebase",
-    "Azure", 
-    "AWS"
+    "Azure",
+    "AWS",
   ];
 
   // Handle technology filter toggle
@@ -230,13 +251,13 @@ export default function Home() {
               buttonText2={card.buttonText2}
               buttonLink2={card.buttonLink2}
               technologies={card.technologies}
-              badge={card.badge} 
+              badge={card.badge}
             />
           ))}
         </div>
-        <div className="mx-auto">
+        {/* <div className="mx-auto">
           <CommitsTable />
-        </div>
+        </div> */}
       </section>
     </main>
   );
