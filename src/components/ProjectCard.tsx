@@ -23,7 +23,7 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
-      <Card className="group bg-[rgb(22,23,26)] text-white border border-zinc-800 shadow-none rounded-xl overflow-hidden pt-0 transition-all duration-200 hover:brightness-110 cursor-pointer">
+      <Card className="group w-full bg-[rgb(22,23,26)] text-white border border-zinc-800 shadow-none rounded-xl overflow-hidden pt-0 transition-all duration-200 hover:brightness-110 cursor-pointer">
         {/* Top Image */}
         <div className="w-full h-auto bg-black overflow-hidden">{image}</div>
 
