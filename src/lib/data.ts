@@ -30,3 +30,86 @@ export const experienceData = [
     logoAlt: "UTA Logo",
   },
 ];
+
+export const projectData = [
+  {
+    imageSrc: "/projects-ss/mavgrades.png",
+    imageAlt: "MavGrades.com",
+    title: "MavGrades.com",
+    subtitle: "14,000+ Users",
+    description:
+      "MavGrades is a platform that provides grade distributions for UTA courses and professors, helping students make informed class choices.",
+    link: "https://mavgrades.com/",
+    tags: "Next.js, TypeScript, Tailwind CSS, SQLite",
+  },
+  {
+    imageSrc: "/projects-ss/Fleetpulse.png",
+    imageAlt: "FleetPulse",
+    title: "FleetPulse",
+    subtitle: "HackTX 2024 Winner",
+    description:
+      "FleetPulse is a data visualization tool designed to help companies reduce carbon emissions for their truck and vehicle fleets.",
+    link: "https://devpost.com/software/fleetpulse?ref_content=my-projects-tab&ref_feature=my_projects",
+    tags: "Next.js, TypeScript, Tailwind, Cloudflare, Databricks, AWS, Clerk",
+  },
+  {
+    imageSrc: "/projects-ss/Waste0.png",
+    imageAlt: "Waste.0",
+    title: "Waste.0",
+    subtitle: "HackUTA 6 Winner",
+    description:
+      "Waste.0 is a web app designed to reduce food waste by using machine learning to predict optimal inventory levels and forecast item spoilage, minimizing surplus and waste.",
+    link: "https://github.com/atiqurx/waste.0",
+    tags: "Next.js, TypeScript, Tailwind, MongoDB, Databricks, AWS, Streamlit, Clerk",
+  },
+  {
+    imageSrc: "/projects-ss/LegalAI.png",
+    imageAlt: "LegalAI",
+    title: "LegalAI",
+    subtitle: "HackSMU VI Winner",
+    description:
+      "LegalAI is an AI platform that simplifies legal document review by summarizing contracts, spotting risks, and offering key insights with advanced language models.",
+    link: "https://github.com/atiqurx/legalAI",
+    tags: "Next.js, TypeScript, Tailwind, MongoDB, PropelAuth, UploadThing, Open AI",
+  },
+  {
+    imageSrc: "/projects-ss/goblin.png",
+    imageAlt: "Goblin",
+    title: "Goblin",
+    subtitle: "",
+    description:
+      "A robust expense management web app built with .NET, designed to streamline tracking, managing, and analyzing your financial transactions effortlessly.",
+    link: "https://github.com/atiqurx/goblin",
+    tags: "C#, .NET, SQL, Azure, Docker",
+  },
+  {
+    imageSrc: "/projects-ss/srs-context.png",
+    imageAlt: "Service Request System",
+    title: "Service Request System",
+    subtitle: "",
+    description:
+      "An Android application developed with Java that enables users to place service requests to selected service providers.",
+    link: "https://github.com/atiqurx/service-request-system",
+    tags: "Java, Android Studio, Firebase",
+  },
+  {
+    imageSrc: "/projects-ss/utadatathon-site-ss.png",
+    imageAlt: "UTA Datathon 2024 Website",
+    title: "UTA Datathon 2024 Website",
+    subtitle: "",
+    description:
+      "Official website of UTA Datathon 2024 for registrations and general information.",
+    link: "https://github.com/utadatathon/utadatathon2024-website",
+    tags: "Next.js, TypeScript, Tailwind CSS, Firebase, Vercel",
+  },
+  {
+    imageSrc: "/projects-ss/acm-uta-ss.png",
+    imageAlt: "ACM UTA Website",
+    title: "ACM UTA Website",
+    subtitle: "",
+    description:
+      "Official website of Association for Computing Machinery (ACM) @ UTA.",
+    link: "https://acmuta.com/",
+    tags: "Next.js, TypeScript, Tailwind CSS, Firebase Firestore",
+  },
+];

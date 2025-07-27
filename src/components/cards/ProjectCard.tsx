@@ -4,7 +4,6 @@ import React from "react";
 
 type ProjectCardProps = {
   image: React.ReactNode;
-  logo?: React.ReactNode;
   title: string;
   subtitle: string;
   description: string;
@@ -14,7 +13,6 @@ type ProjectCardProps = {
 
 export function ProjectCard({
   image,
-  logo,
   title,
   subtitle,
   description,
@@ -28,13 +26,9 @@ export function ProjectCard({
         <div className="w-full h-auto bg-black overflow-hidden">{image}</div>
 
         <CardContent className="px-6 py-4 space-y-4">
-          {/* logo + name + subtitle */}
+          {/* name + subtitle */}
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
-              {/* Logo */}
-              <div className="w-10 h-10 rounded-full border border-zinc-600 flex items-center justify-center text-xs text-white/50 overflow-hidden">
-                {logo ?? "logo"}
-              </div>
               <h3 className="text-[16px] font-semibold">{title}</h3>
             </div>
             <p className="text-[13px] text-white whitespace-nowrap">
