@@ -10,16 +10,39 @@ import {
   ChevronRight,
   Download,
   Layers,
+  Copy,
+  X,
+  Check,
 } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 import BodyIcon from "@/app/icons/BodyIcon";
 import ProjectsIcon from "@/app/icons/ProjectsIcon";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogClose,
+} from "@/components/ui/dialog";
 
 function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
 
-  const toggleMenu = () => {
-    setShowMenu((prev) => !prev);
+  const [copied, setCopied] = useState(false);
+
+  const toggleMenu = () => setShowMenu((prev) => !prev);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText("https://www.atiqurx.com/");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Copy failed", err);
+    }
   };
 
   return (
@@ -39,6 +62,8 @@ function NavBar() {
             </button>
           </div>
           <div className="w-[1px] h-5 bg-zinc-700 mx-2" />
+
+          {/* Action Buttons */}
           <div className="flex items-center gap-4">
             <button className="text-white/60 hover:text-white transition cursor-pointer">
               <MailIcon className="w-[19px] h-[19px]" />
@@ -46,10 +71,61 @@ function NavBar() {
             <button className="text-white/60 hover:text-white transition cursor-pointer">
               <CalendarIcon className="w-[18px] h-[18px]" />
             </button>
-            <button className="text-white/60 hover:text-white transition cursor-pointer">
-              <ShareIcon className="w-[18px] h-[18px]" />
-            </button>
+
+            {/* Share Button with Dialog Trigger */}
+            <Dialog>
+              <DialogTrigger asChild>
+                <button
+                  className="text-white/60 hover:text-white transition cursor-pointer"
+                  title="Share"
+                >
+                  <ShareIcon className="w-[18px] h-[18px]" />
+                </button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[425px] bg-[rgb(22,23,26)] border border-[rgb(40,42,49)] text-white">
+                <DialogHeader>
+                  <DialogTitle>Share</DialogTitle>
+                  <DialogClose className="absolute right-4 top-4 text-white/60 hover:text-white">
+                    <X className="h-4 w-4" />
+                  </DialogClose>
+                  <DialogDescription className="text-sm text-white/60 mt-1">
+                    Thanks for sharing portfolio!
+                  </DialogDescription>
+                </DialogHeader>
+
+                <div className="flex items-center gap-2">
+                  <input
+                    type="text"
+                    readOnly
+                    value="https://www.atiqurx.com/"
+                    className="w-full bg-transparent border border-zinc-700 px-3 py-2 rounded-sm text-sm text-white/60 focus:outline-none  transition"
+                  />
+                  <button
+                    onClick={handleCopy}
+                    className="p-2 hover:bg-zinc-700 rounded-md transition"
+                  >
+                    {copied ? (
+                      <Check className="w-4 h-4 text-white" />
+                    ) : (
+                      <Copy className="w-4 h-4 text-white/70" />
+                    )}
+                  </button>
+                </div>
+
+                <Link
+                  href="https://www.linkedin.com/in/atiqurx/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="mt-1 bg-[rgb(36,38,43)] w-full flex justify-center items-center gap-2 py-[10px] border border-zinc-700 rounded-sm hover:brightness-110 transition text-sm">
+                    <FaLinkedin className="w-4 h-4" />
+                    Share Linkedin
+                  </button>
+                </Link>
+              </DialogContent>
+            </Dialog>
           </div>
+
           <div className="w-[1px] h-5 bg-zinc-700 mx-2" />
           <div className="items-center flex">
             <button className="text-white/60 hover:text-white transition cursor-pointer">
@@ -61,6 +137,7 @@ function NavBar() {
           </div>
         </div>
 
+        {/* Resume Download */}
         <Link
           href="#"
           target="_blank"
