@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import {
   LayoutGrid,
   MailIcon,
-  CalendarIcon,
   ShareIcon,
   ChevronLeft,
   ChevronRight,
@@ -66,10 +65,13 @@ function NavBar() {
           {/* Action Buttons */}
           <div className="flex items-center gap-4">
             <button className="text-white/60 hover:text-white transition cursor-pointer">
-              <MailIcon className="w-[19px] h-[19px]" />
-            </button>
-            <button className="text-white/60 hover:text-white transition cursor-pointer">
-              <CalendarIcon className="w-[18px] h-[18px]" />
+              <Link
+                href={"mailto:axr0966@mavs.uta.edu"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MailIcon className="w-[19px] h-[19px]" />
+              </Link>
             </button>
 
             {/* Share Button with Dialog Trigger */}

@@ -22,7 +22,7 @@ export function ExperienceCard({
   logo,
 }: ExperienceCardProps) {
   return (
-    <Card className="bg-[rgb(22,23,26)] text-white border border-zinc-800 shadow-none rounded-xl">
+    <Card className="bg-[rgb(22,23,26)] text-white border border-zinc-800 shadow-none rounded-xl mb-6">
       <CardContent className="px-6 py-2 space-y-4">
         {/* Logo + Company + Role */}
         <div className="flex justify-between items-center">

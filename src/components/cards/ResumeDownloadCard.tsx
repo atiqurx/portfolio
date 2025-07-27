@@ -17,7 +17,7 @@ export function ResumeDownloadCard({
   resumeUrl,
 }: ResumeDownloadCardProps) {
   return (
-    <Card className="bg-[rgb(22,23,26)] w-full text-white border border-zinc-800 rounded-lg">
+    <Card className="bg-[rgb(22,23,26)] w-full text-white border border-zinc-800 rounded-lg mt-6">
       <CardContent className="flex flex-col md:flex-row justify-between items-start md:items-center px-8 gap-4">
         {/* Text Content */}
         <div>
