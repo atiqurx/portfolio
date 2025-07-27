@@ -1,0 +1,32 @@
+export const experienceData = [
+  {
+    company: "Enchanted Rock",
+    role: "Software Engineer Intern",
+    description: `Engineered a full-stack .NET 8 Blazor app dashboard, integrating custom parsing (ClosedXML, C# regex) and API proxy services—improving configuration workflow efficiency by 40%. Developed a secure HTTP client library (HttpClientFactory, MemoryCache token provider, JWT auth) with integration tests (MSTest) and centralized exception middleware, reducing authentication-related bugs by 75%.`,
+    startDate: "Jun. 2025",
+    endDate: "Current",
+    location: "Houston, Texas",
+    logo: "/logos/enchanted-rock-logo.jpeg",
+    logoAlt: "Enchanted Rock Logo",
+  },
+  {
+    company: "UTA Office of Information Technology",
+    role: "Web Developer",
+    description: `Manage content updates for university websites using WordPress, Sitecore, and Cascade, optimizing images and scripts to enhance site performance by 20%. Resolve weekly web publishing requests via ServiceNow, adhering to ITIL standards by troubleshooting code errors and optimizing server configurations, achieving 95% SLA compliance.`,
+    startDate: "Oct. 2024",
+    endDate: "May. 2025",
+    location: "Arlington, Texas",
+    logo: "/logos/uta-oit-logo.jpeg",
+    logoAlt: "UTA Office of Information Technology (OIT) Logo",
+  },
+  {
+    company: "UTA Academic Success Center ",
+    role: "Supplemental Instructor",
+    description: `Led weekly group sessions for 50+ students in Intermediate Programming, applying active learning strategies and coding exercises to boost comprehension and engagement.`,
+    startDate: "Aug. 2023",
+    endDate: "Oct. 2024",
+    location: "Arlington, Texas",
+    logo: "/logos/uta.jpeg",
+    logoAlt: "UTA Logo",
+  },
+];

@@ -10,6 +10,7 @@ type ExperienceCardProps = {
   endDate: string;
   location: string;
   logo?: React.ReactNode;
+  logoAlt?: string;
 };
 
 export function ExperienceCard({
@@ -20,6 +21,7 @@ export function ExperienceCard({
   endDate,
   location,
   logo,
+  logoAlt,
 }: ExperienceCardProps) {
   return (
     <Card className="bg-[rgb(22,23,26)] text-white border border-zinc-800 shadow-none rounded-xl mb-6">
@@ -28,12 +30,22 @@ export function ExperienceCard({
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-4">
             {/* Logo */}
-            <div className="w-10 h-10 rounded-full border border-zinc-600 flex items-center justify-center text-xs text-white/50 overflow-hidden">
-              {logo ?? "logo"}
+            <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs text-white/50 overflow-hidden">
+              {logo ? (
+                <img
+                  src={logo as string}
+                  alt={logoAlt}
+                  className="w-full h-full object-contain"
+                />
+              ) : (
+                "logo"
+              )}
             </div>
-            <h3 className="text-[16px] font-semibold">{company}</h3>
+            <div>
+              <h3 className="text-[16px] font-semibold">{company}</h3>
+              <p className="text-[13px] text-white">{role}</p>
+            </div>
           </div>
-          <p className="text-[13px] text-white whitespace-nowrap">{role}</p>
         </div>
 
         {/* Description */}
@@ -45,7 +57,7 @@ export function ExperienceCard({
         <div className="flex gap-6 text-sm items-center">
           <div className="flex items-center gap-1">
             <CalendarIcon className="w-4 h-4 text-white" />
-            <h4 className="text-[12px] text-white/70">
+            <h4 className="text-[12px] text-white/70 ml-1">
               {startDate} - {endDate}
             </h4>
           </div>

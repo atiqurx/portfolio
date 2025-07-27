@@ -10,6 +10,7 @@ type EducationCardProps = {
   endDate: string;
   location: string;
   logo?: React.ReactNode;
+  logoAlt?: string;
 };
 
 export function EducationCard({
@@ -20,6 +21,7 @@ export function EducationCard({
   endDate,
   location,
   logo,
+  logoAlt,
 }: EducationCardProps) {
   return (
     <Card className="bg-[rgb(22,23,26)] text-white border border-zinc-800 shadow-none rounded-xl">
@@ -28,9 +30,18 @@ export function EducationCard({
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-4">
             {/* Logo */}
-            <div className="w-10 h-10 rounded-full border border-zinc-600 flex items-center justify-center text-xs text-white/50 overflow-hidden">
-              {logo ?? "logo"}
+            <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs text-white/50 overflow-hidden">
+              {logo ? (
+                <img
+                  src={logo as string}
+                  alt={logoAlt}
+                  className="w-full h-full object-contain"
+                />
+              ) : (
+                "logo"
+              )}
             </div>
+
             <div>
               <h3 className="text-[16px] font-semibold">{institution}</h3>
               <p className="text-[13px] text-white">{subtitle}</p>

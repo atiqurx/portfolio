@@ -141,7 +141,7 @@ function NavBar() {
 
         {/* Resume Download */}
         <Link
-          href="#"
+          href="/Atiqur_Rahman_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="cursor-pointer"

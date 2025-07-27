@@ -1,4 +1,5 @@
 import React from "react";
+import AvailabilityDot from "@/components/AvailabilityDot";
 
 type TitleBarProps = {
   label: string;
@@ -16,6 +17,13 @@ function TitleBar({ label, icon, className = "" }: TitleBarProps) {
 
       {/* Label Text */}
       <p className="text-[12px] font-medium">{label}</p>
+
+      {/* Availability Dot (only for "Work & Edu") */}
+      {label === "Work & Edu" && (
+        <div className="ml-auto">
+          <AvailabilityDot />
+        </div>
+      )}
     </div>
   );
 }
