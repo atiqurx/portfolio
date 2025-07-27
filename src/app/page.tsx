@@ -1,10 +1,10 @@
 import TitleBar from "@/components/TitleBar";
 import Image from "next/image";
 import BodyIcon from "./icons/BodyIcon";
-import { ExperienceCard } from "@/components/ExperienceCard";
-import { EducationCard } from "@/components/EducationCard";
-import { ProjectCard } from "@/components/ProjectCard";
-import { ResumeDownloadCard } from "@/components/ResumeDownloadCard";
+import { ExperienceCard } from "@/components/cards/ExperienceCard";
+import { EducationCard } from "@/components/cards/EducationCard";
+import { ProjectCard } from "@/components/cards/ProjectCard";
+import { ResumeDownloadCard } from "@/components/cards/ResumeDownloadCard";
 
 export default function Home() {
   return (
