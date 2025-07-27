@@ -157,17 +157,20 @@ function NavBar() {
       {showMenu && (
         <div className="fixed bottom-22 left-1/2 -translate-x-1/2 bg-[rgb(22,23,26)] border border-[rgb(40,42,49)] rounded-lg p-2 grid grid-cols-2 gap-2 z-50 shadow-xl backdrop-blur-md">
           {[
-            { label: "Work & Edu", icon: BodyIcon },
-            { label: "Projects", icon: ProjectsIcon },
-            { label: "Tech Stack", icon: <Layers className="w-5 h-5" /> },
+            { label: "Work & Edu", icon: BodyIcon, href: "/" },
+            { label: "Projects", icon: ProjectsIcon, href: "/projects" },
+            {
+              label: "Tech Stack",
+              icon: <Layers className="w-5 h-5" />,
+              href: "/tech-stack",
+            },
           ].map((item) => (
-            <div
-              key={item.label}
-              className="flex items-center justify-center flex-col bg-[rgb(36,38,43)] text-white rounded-md px-14 py-8 cursor-pointer hover:brightness-110 transition"
-            >
-              <div className="text-2xl mb-3 w-5 h-5">{item.icon}</div>
-              <div className="text-[12px] font-medium">{item.label}</div>
-            </div>
+            <Link href={item.href} key={item.label}>
+              <div className="flex items-center justify-center flex-col bg-[rgb(36,38,43)] text-white rounded-md px-14 py-8 cursor-pointer hover:brightness-110 transition">
+                <div className="text-2xl mb-3 w-5 h-5">{item.icon}</div>
+                <div className="text-[12px] font-medium">{item.label}</div>
+              </div>
+            </Link>
           ))}
         </div>
       )}
