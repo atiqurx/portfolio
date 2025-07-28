@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
@@ -13,9 +12,35 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Atiqur Rahman",
-  description: "Personal website of Atiqur Rahman",
+export const metadata = {
+  title: "Atiqur Rahman Portfolio",
+  description:
+    "Software Engineer building fast, scalable apps in full-stack, cloud, and ML. Projects, experience, and tech stack.",
+  openGraph: {
+    title: "Atiqur Rahman | Software Engineer Portfolio",
+    description:
+      "Explore my projects, tech stack, and experience as a full-stack developer with a focus on impactful, scalable solutions.",
+    url: "https://www.atiqurx.com",
+    siteName: "AtiqurX",
+    images: [
+      {
+        url: "https://www.atiqurx.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Atiqur Rahman Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Atiqur Rahman | Software Engineer Portfolio",
+    description:
+      "Explore my projects, tech stack, and experience as a full-stack developer.",
+    images: ["https://www.atiqurx.com/og-image.png"],
+    creator: "@atiqur_x",
+  },
 };
 
 export default function RootLayout({
