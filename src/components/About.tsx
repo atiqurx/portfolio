@@ -83,9 +83,11 @@ export default function About() {
               <Image
                 src="/atiqur.jpg"
                 alt="Atiqur Rahman"
-                fill
+                width={500}
+                height={500}
+                className="object-contain w-full h-full"
                 sizes="(max-width: 768px) 100vw, 40vw"
-                className="object-contain"
+                priority
               />
             </div>
           </div>
