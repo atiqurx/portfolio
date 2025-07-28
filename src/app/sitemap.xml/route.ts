@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 const SITE_URL = "https://www.atiqurx.com";
 
 function generateSiteMap() {
-  const staticRoutes = ["", "projects", "tech-stack", "about"];
+  const staticRoutes = ["", "projects", "tech-stack"];
 
   const urls = staticRoutes
     .map(
