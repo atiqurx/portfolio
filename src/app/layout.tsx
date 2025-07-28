@@ -39,7 +39,7 @@ export const metadata = {
     title: "Atiqur Rahman | Software Engineer Portfolio",
     description:
       "Explore my projects, tech stack, and experience as a full-stack developer.",
-    images: ["https://www.atiqurx.com/og-image.png"],
+    images: ["https://www.atiqurx.com/op-image.png"],
     creator: "@atiqur_x",
   },
 };
