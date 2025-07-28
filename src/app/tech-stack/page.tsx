@@ -42,7 +42,7 @@ function page() {
   return (
     <div className="font-sans items-center justify-items-center min-h-screen py-20">
       <main className="w-[68%]">
-        <TitleBar label="Toolbox" icon={<Layers className="w-4 h-4" />} />
+        <TitleBar label="Tech Stack" icon={<Layers className="w-4 h-4" />} />
 
         {/* Intro */}
         <div className="flex flex-col md:flex-row gap-16 mt-6">

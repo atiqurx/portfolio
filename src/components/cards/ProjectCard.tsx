@@ -25,7 +25,7 @@ export function ProjectCard({
         {/* Top Image */}
         <div className="w-full h-auto bg-black overflow-hidden">{image}</div>
 
-        <CardContent className="px-6 py-4 space-y-4">
+        <CardContent className="px-6 py-2 space-y-4">
           {/* name + subtitle */}
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
@@ -40,7 +40,7 @@ export function ProjectCard({
           <p className="text-sm text-white/70 leading-relaxed">{description}</p>
 
           {/* Date + Tags + Show More */}
-          <div className="flex justify-between items-center text-sm text-white/60 gap-16">
+          <div className="flex flex-col gap-2 text-sm text-white/60">
             {/* Date & Tags */}
             <div className="flex gap-6 text-sm items-center">
               <div className="flex items-center gap-1">
@@ -49,8 +49,8 @@ export function ProjectCard({
               </div>
             </div>
 
-            {/* show More */}
-            <span className="text-[13px] text-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center">
+            {/* Show More aligned right */}
+            <span className="text-[13px] text-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center self-end">
               <Eye className="w-4 h-4 text-blue-500 inline mr-2" />
               <span>Show More</span>
             </span>

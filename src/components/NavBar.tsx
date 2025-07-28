@@ -110,7 +110,7 @@ function NavBar() {
                     <X className="h-4 w-4" />
                   </DialogClose>
                   <DialogDescription className="text-sm text-white/60 mt-1">
-                    Thanks for sharing portfolio!
+                    Thanks for sharing my portfolio!
                   </DialogDescription>
                 </DialogHeader>
 

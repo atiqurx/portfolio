@@ -25,14 +25,15 @@ function page() {
               <p className="text-white/70 leading-relaxed text-[13px]">
                 I focus on delivering applications that are fast, scalable, and
                 easy to maintain. Whether it's designing a dashboard,
-                implementing OCR pipelines, or integrating APIs, I aim to create
-                software that makes life easier for users and devs alike.
+                implementing OCR pipelines, or integrating APIs, I aim to build
+                software that not only solves real problems but also contributes
+                meaningfully to the world.
               </p>
             </div>
           </div>
         </section>
         {/* PROJECTS */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
           {projectData.map((project, index) => (
             <ProjectCard
               key={index}
