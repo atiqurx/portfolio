@@ -13,13 +13,13 @@ import Link from "next/link";
 export default function About() {
   return (
     <>
-      <main className="w-[90%] md:w-[68%]">
+      <main className="w-[90%] md:w-[68%] mx-auto">
         <TitleBar label="Work & Edu" icon={BodyIcon} />
 
         {/* INTRO */}
         <section className="flex flex-col md:flex-row gap-10 mt-6">
           {/* BIO */}
-          <div className="w-full md:w-[60%] mx-auto">
+          <div className="w-full md:w-[60%]">
             <h1 className="text-[24px]/[1.2em] font-bold">
               <span className="text-white">Atiqur Rahman.</span> <br />
               <span className="text-white/70">Software Engineer.</span>
