@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { CalendarIcon, Tags, Eye } from "lucide-react";
+import { Tags, Eye } from "lucide-react";
 import React from "react";
 
 type ProjectCardProps = {

@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { CalendarIcon, MapPinIcon } from "lucide-react";
 import React from "react";
+import Image from "next/image";
 
 type ExperienceCardProps = {
   company: string;
@@ -32,10 +33,12 @@ export function ExperienceCard({
             {/* Logo */}
             <div className="w-10 h-10 rounded-full flex items-center justify-center text-xs text-white/50 overflow-hidden">
               {logo ? (
-                <img
+                <Image
                   src={logo as string}
-                  alt={logoAlt}
+                  alt={logoAlt || "logo"}
                   className="w-full h-full object-contain"
+                  width={500}
+                  height={300}
                 />
               ) : (
                 "logo"
