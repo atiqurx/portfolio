@@ -19,7 +19,7 @@ export default function About() {
         {/* INTRO */}
         <section className="flex flex-col md:flex-row gap-10 mt-6">
           {/* BIO */}
-          <div className="w-full md:w-[60%]">
+          <div className="w-full md:w-[60%] mx-auto">
             <h1 className="text-[24px]/[1.2em] font-bold">
               <span className="text-white">Atiqur Rahman.</span> <br />
               <span className="text-white/70">Software Engineer.</span>

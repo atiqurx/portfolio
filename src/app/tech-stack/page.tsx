@@ -89,7 +89,7 @@ export default function Page() {
       </Head>
 
       <div className="font-sans items-center justify-items-center min-h-screen py-10 md:py-20">
-        <main className="w-[90%] md:w-[68%]">
+        <main className="w-[90%] md:w-[68%] mx-auto">
           <TitleBar label="Tech Stack" icon={<Layers className="w-4 h-4" />} />
 
           {/* Intro */}

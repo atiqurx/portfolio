@@ -20,7 +20,7 @@ export default function Page() {
       </Head>
 
       <div className="font-sans items-center justify-items-center min-h-screen py-10 md:py-20">
-        <main className="w-[90%] md:w-[68%]">
+        <main className="w-[90%] md:w-[68%] mx-auto">
           <TitleBar label="Projects" icon={ProjectsIcon} />
 
           <section className="flex flex-col md:flex-row gap-4 md:gap-16 mt-6">
