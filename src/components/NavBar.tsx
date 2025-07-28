@@ -181,7 +181,7 @@ function NavBar() {
           href="/Atiqur_Rahman_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="cursor-pointer"
+          className="hidden sm:flex cursor-pointer"
         >
           <button className="rounded-sm bg-[rgb(22,23,26)] border border-[rgb(40,42,49)] text-white/60 hover:text-white transition cursor-pointer flex items-center gap-2 px-4 py-2 shadow-lg backdrop-blur-md">
             <Download className="w-4 h-4 text-orange-500" />
@@ -192,7 +192,7 @@ function NavBar() {
 
       {/* Slides Menu */}
       {showMenu && (
-        <div className="fixed bottom-22 left-1/2 -translate-x-1/2 bg-[rgb(22,23,26)] border border-[rgb(40,42,49)] rounded-lg p-2 grid grid-cols-2 gap-2 z-50 shadow-xl backdrop-blur-md">
+        <div className="fixed bottom-22 left-1/2 -translate-x-1/2 bg-[rgb(22,23,26)] border border-[rgb(40,42,49)] rounded-lg p-2 grid grid-cols-1 sm:grid-cols-2 gap-2 z-50 shadow-xl backdrop-blur-md max-w-xs sm:max-w-md">
           {[
             { label: "Work & Edu", icon: BodyIcon, href: "/" },
             { label: "Projects", icon: ProjectsIcon, href: "/projects" },
@@ -203,9 +203,11 @@ function NavBar() {
             },
           ].map((item) => (
             <Link href={item.href} key={item.label}>
-              <div className="flex items-center justify-center flex-col bg-[rgb(36,38,43)] text-white rounded-md px-14 py-8 cursor-pointer hover:brightness-110 transition">
-                <div className="text-2xl mb-3 w-5 h-5">{item.icon}</div>
-                <div className="text-[12px] font-medium">{item.label}</div>
+              <div className="flex items-center justify-center flex-col bg-[rgb(36,38,43)] text-white rounded-md px-8 py-4 sm:px-14 sm:py-8 cursor-pointer hover:brightness-110 transition">
+                <div className="text-2xl mb-2 sm:mb-3 w-5 h-5">{item.icon}</div>
+                <div className="text-[10px] sm:text-[12px] font-medium text-center">
+                  {item.label}
+                </div>
               </div>
             </Link>
           ))}

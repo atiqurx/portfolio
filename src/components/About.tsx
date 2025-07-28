@@ -12,7 +12,7 @@ import Link from "next/link";
 
 function About() {
   return (
-    <main className="w-[68%]">
+    <main className="w-[90%] md:w-[68%]">
       <TitleBar label="Work & Edu" icon={BodyIcon} />
 
       {/* INTRO */}

@@ -42,8 +42,10 @@ export function ExperienceCard({
               )}
             </div>
             <div>
-              <h3 className="text-[16px] font-semibold">{company}</h3>
-              <p className="text-[13px] text-white">{role}</p>
+              <h3 className="text-[15px] md:text-[16px] font-semibold">
+                {company}
+              </h3>
+              <p className="text-[12px] md:text-[13px] text-white">{role}</p>
             </div>
           </div>
         </div>

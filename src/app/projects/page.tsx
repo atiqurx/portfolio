@@ -7,10 +7,10 @@ import { projectData } from "@/lib/data";
 
 function page() {
   return (
-    <div className="font-sans items-center justify-items-center min-h-screen py-20">
-      <main className="w-[68%]">
+    <div className="font-sans items-center justify-items-center min-h-screen py-10 md:py-20">
+      <main className="w-[90%] md:w-[68%]">
         <TitleBar label="Projects" icon={ProjectsIcon} />
-        <section className="flex flex-col md:flex-row gap-16 mt-6">
+        <section className="flex flex-col md:flex-row gap-4 md:gap-16 mt-6">
           <div className="w-full md:w-[50%]">
             <h1 className="text-[24px]/[1.2em] font-bold">
               <span className="text-white">Code with a purpose.</span> <br />

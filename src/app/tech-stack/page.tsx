@@ -40,12 +40,12 @@ import TechCard from "@/components/cards/TechCard";
 
 function page() {
   return (
-    <div className="font-sans items-center justify-items-center min-h-screen py-20">
-      <main className="w-[68%]">
+    <div className="font-sans items-center justify-items-center min-h-screen py-10 md:py-20">
+      <main className="w-[90%] md:w-[68%]">
         <TitleBar label="Tech Stack" icon={<Layers className="w-4 h-4" />} />
 
         {/* Intro */}
-        <div className="flex flex-col md:flex-row gap-16 mt-6">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-16 mt-6">
           <div className="w-full md:w-[50%]">
             <h1 className="text-[24px]/[1.2em] font-bold">
               <span className="text-white">My toolbox essentials.</span> <br />
