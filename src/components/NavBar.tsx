@@ -26,13 +26,32 @@ import {
   DialogDescription,
   DialogClose,
 } from "@/components/ui/dialog";
+import { useRouter, usePathname } from "next/navigation";
 
 function NavBar() {
   const [showMenu, setShowMenu] = useState(false);
-
   const [copied, setCopied] = useState(false);
-
   const toggleMenu = () => setShowMenu((prev) => !prev);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const pages = ["/", "/projects", "/tech-stack"];
+  const currentIndex = pages.indexOf(pathname);
+
+  const isFirstPage = currentIndex === 0;
+  const isLastPage = currentIndex === pages.length - 1;
+
+  const goPrev = () => {
+    if (!isFirstPage) {
+      router.push(pages[currentIndex - 1]);
+    }
+  };
+
+  const goNext = () => {
+    if (!isLastPage) {
+      router.push(pages[currentIndex + 1]);
+    }
+  };
 
   const handleCopy = async () => {
     try {
@@ -130,10 +149,28 @@ function NavBar() {
 
           <div className="w-[1px] h-5 bg-zinc-700 mx-2" />
           <div className="items-center flex">
-            <button className="text-white/60 hover:text-white transition cursor-pointer">
+            <button
+              onClick={goPrev}
+              disabled={isFirstPage}
+              className={`transition cursor-pointer ${
+                isFirstPage
+                  ? "text-white/20 cursor-default"
+                  : "text-white/70 hover:text-white"
+              }`}
+              title="Previous"
+            >
               <ChevronLeft className="w-5 h-5" />
             </button>
-            <button className="text-white/60 hover:text-white transition cursor-pointer">
+            <button
+              onClick={goNext}
+              disabled={isLastPage}
+              className={`transition cursor-pointer ${
+                isLastPage
+                  ? "text-white/20 cursor-default"
+                  : "text-white/70 hover:text-white"
+              }`}
+              title="Next"
+            >
               <ChevronRight className="w-5 h-5" />
             </button>
           </div>
