@@ -62,6 +62,11 @@ export default function RootLayout({
               name: "Atiqur Rahman",
               url: "https://www.atiqurx.com",
               image: "https://www.atiqurx.com/atiqur.jpg",
+              award: [
+                "Best AI Application with Cloudflare - HackTX 2024",
+                "Second Place (Main Track) and Best AI Project with Databricks - HackUTA 6",
+                "MLH - Best Use of MongoDB - HackSMU VI",
+              ],
               jobTitle: "Software Engineer",
               alumniOf: {
                 "@type": "CollegeOrUniversity",
@@ -76,11 +81,14 @@ export default function RootLayout({
               sameAs: [
                 "https://www.linkedin.com/in/atiqurx",
                 "https://github.com/atiqurx",
+                "https://devpost.com/atiqurx",
+                "https://www.theshorthorn.com/news/honors-college-hosts-mardi-gras-celebration-to-build-community-for-students/article_1a06ca40-ad60-11ed-8832-3f69f4c39387.html",
               ],
               hasPart: {
                 "@type": "WebApplication",
                 name: "MavGrades",
                 url: "https://mavgrades.com",
+                codeRepository: "https://github.com/acmcreate/mavgrades",
                 contributor: {
                   "@type": "Person",
                   name: "Atiqur Rahman",

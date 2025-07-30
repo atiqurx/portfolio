@@ -59,7 +59,7 @@ export const projectData = [
     subtitle: "HackUTA 6 Winner",
     description:
       "Waste.0 is a web app designed to reduce food waste by using machine learning to predict optimal inventory levels and forecast item spoilage, minimizing surplus and waste.",
-    link: "https://github.com/atiqurx/waste.0",
+    link: "https://devpost.com/software/waste-0",
     tags: "Next.js, TypeScript, Tailwind, MongoDB, Databricks, AWS, Streamlit, Clerk",
   },
   {
@@ -69,7 +69,7 @@ export const projectData = [
     subtitle: "HackSMU VI Winner",
     description:
       "LegalAI is an AI platform that simplifies legal document review by summarizing contracts, spotting risks, and offering key insights with advanced language models.",
-    link: "https://github.com/atiqurx/legalAI",
+    link: "https://devpost.com/software/legal-ai-cad5xy",
     tags: "Next.js, TypeScript, Tailwind, MongoDB, PropelAuth, UploadThing, Open AI",
   },
   {
