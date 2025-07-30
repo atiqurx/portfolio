@@ -88,7 +88,7 @@ export default function RootLayout({
                 "@type": "WebApplication",
                 name: "MavGrades",
                 url: "https://mavgrades.com",
-                codeRepository: "https://github.com/acmcreate/mavgrades",
+                codeRepository: "https://github.com/acmuta/mavgrades",
                 contributor: {
                   "@type": "Person",
                   name: "Atiqur Rahman",
