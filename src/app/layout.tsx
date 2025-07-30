@@ -40,7 +40,7 @@ export const metadata = {
     title: "Atiqur Rahman | Software Engineer Portfolio",
     description:
       "Explore my projects, tech stack, and experience as a full-stack developer.",
-    images: ["https://www.atiqurx.com/op-image.png"],
+    images: ["https://www.atiqurx.com/og-image.png"],
     creator: "@atiqur_x",
   },
 };
@@ -97,6 +97,16 @@ export default function RootLayout({
               },
             }),
           }}
+        />
+        <link
+          rel="canonical"
+          href="https://www.atiqurx.com/Atiqur_Rahman_Resume.pdf"
+        />
+        <link
+          rel="alternate"
+          type="application/pdf"
+          href="https://www.atiqurx.com/Atiqur_Rahman_Resume.pdf"
+          title="Atiqur Rahman Resume"
         />
       </Head>
       <body
