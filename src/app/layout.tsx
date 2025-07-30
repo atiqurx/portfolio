@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import { Analytics } from "@vercel/analytics/next";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,6 +52,45 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Atiqur Rahman",
+              url: "https://www.atiqurx.com",
+              image: "https://www.atiqurx.com/atiqur.jpg",
+              jobTitle: "Software Engineer",
+              alumniOf: {
+                "@type": "CollegeOrUniversity",
+                name: "The University of Texas at Arlington",
+                url: "https://www.uta.edu",
+              },
+              memberOf: {
+                "@type": "Organization",
+                name: "ACM @ UT Arlington",
+                url: "https://acmuta.com",
+              },
+              sameAs: [
+                "https://www.linkedin.com/in/atiqurx",
+                "https://github.com/atiqurx",
+              ],
+              hasPart: {
+                "@type": "WebApplication",
+                name: "MavGrades",
+                url: "https://mavgrades.com",
+                contributor: {
+                  "@type": "Person",
+                  name: "Atiqur Rahman",
+                  url: "https://www.atiqurx.com",
+                },
+              },
+            }),
+          }}
+        />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
