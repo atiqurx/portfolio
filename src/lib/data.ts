@@ -132,7 +132,7 @@ export const timelineItems = [
     image: "/timeline/datathon.png",
   },
   {
-    title: "Academic Success Center",
+    title: "UTA Academic Success Center",
     subtitle: "Peer Academic Coach",
     description:
       "Provided one-on-one academic support and guidance to help students improve their study habits and understanding.",
@@ -140,7 +140,7 @@ export const timelineItems = [
     image: "/timeline/asc.jpg",
   },
   {
-    title: "New Maverick Orientation",
+    title: "UTA New Maverick Orientation",
     subtitle: "Orientation Leader",
     description:
       "Welcomed 10k+ new students, hosted group sessions, and ran events. Helped students feel at home at UTA from day one.",
@@ -148,7 +148,7 @@ export const timelineItems = [
     image: "/timeline/orientation.JPG",
   },
   {
-    title: "Honors College",
+    title: "UTA Honors College",
     subtitle: "Programming Board & Advocate",
     description:
       "Planned events and helped advocate for Honors students. Worked closely with staff to build a stronger community.",
