@@ -12,6 +12,7 @@ import {
   Copy,
   X,
   Check,
+  Feather,
 } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
@@ -35,7 +36,7 @@ function NavBar() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const pages = ["/", "/projects", "/tech-stack"];
+  const pages = ["/", "/projects", "/tech-stack", "/beyond-classroom"];
   const currentIndex = pages.indexOf(pathname);
 
   const isFirstPage = currentIndex === 0;
@@ -200,6 +201,11 @@ function NavBar() {
               label: "Tech Stack",
               icon: <Layers className="w-5 h-5" />,
               href: "/tech-stack",
+            },
+            {
+              label: "Beyond Class",
+              icon: <Feather className="w-5 h-5" />,
+              href: "/beyond-classroom",
             },
           ].map((item) => (
             <Link href={item.href} key={item.label}>
