@@ -50,7 +50,7 @@ export const projectData = [
     description:
       "FleetPulse is a data visualization tool designed to help companies reduce carbon emissions for their truck and vehicle fleets.",
     link: "https://devpost.com/software/fleetpulse?ref_content=my-projects-tab&ref_feature=my_projects",
-    tags: "Next.js, TypeScript, Tailwind, Cloudflare, Databricks, AWS, Clerk",
+    tags: "Next.js, TypeScript, Tailwind, Cloudflare, Databricks, AWS, Clerk, PySpark, Scikit-learn, Random Forest, Multi-output Regression",
   },
   {
     imageSrc: "/projects-ss/Waste0.png",
@@ -111,6 +111,26 @@ export const projectData = [
       "Official website of Association for Computing Machinery (ACM) @ UTA.",
     link: "https://acmuta.com/",
     tags: "Next.js, TypeScript, Tailwind CSS, Firebase Firestore",
+  },
+  {
+    imageSrc: "/projects-ss/cbre.jpg",
+    imageAlt: "CBRE Asset Management",
+    title: "CBRE Asset Management",
+    subtitle: "",
+    description:
+      "A machine learning model that predicts the maintenance needs in commercial building assets.",
+    link: "https://github.com/atiqurx/cbre_asset_condition_monitor",
+    tags: "Python, Pandas, Scikit-learn, Random Forest, K-Means Clustering",
+  },
+  {
+    imageSrc: "/projects-ss/credit-fraud.png",
+    imageAlt: "Credit Card Fraud Detection",
+    title: "Credit Card Fraud Detection",
+    subtitle: "",
+    description:
+      "Exploratory data analysis and prediction model for credit card fraud detection.",
+    link: "https://www.kaggle.com/code/atiqurrahman75/credit-card-fraud-detection",
+    tags: "Python, Pandas, Scikit-learn",
   },
 ];
 
