@@ -4,7 +4,7 @@ export const experienceData = [
     role: "Software Engineer Intern",
     description: `Engineered a full-stack .NET 8 Blazor app dashboard, integrating custom parsing (ClosedXML, C# regex) and API proxy services—improving configuration workflow efficiency by 40%. Developed a secure HTTP client library (HttpClientFactory, MemoryCache token provider, JWT auth) with integration tests (MSTest) and centralized exception middleware, reducing authentication-related bugs by 75%.`,
     startDate: "Jun. 2025",
-    endDate: "Current",
+    endDate: "Aug. 2025",
     location: "Houston, Texas",
     logo: "/logos/enchanted-rock-logo.jpeg",
     logoAlt: "Enchanted Rock Logo",
