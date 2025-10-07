@@ -2,7 +2,12 @@ import React from "react";
 import TitleBar from "@/components/TitleBar";
 import Image from "next/image";
 import BodyIcon from "@/app/icons/BodyIcon";
-import { MailIcon, GraduationCap, BriefcaseBusiness } from "lucide-react";
+import {
+  MailIcon,
+  GraduationCap,
+  BriefcaseBusiness,
+  ArrowUpRight,
+} from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { ExperienceCard } from "@/components/cards/ExperienceCard";
 import { EducationCard } from "@/components/cards/EducationCard";
@@ -26,20 +31,39 @@ export default function About() {
             </h1>
 
             <p className="mt-4 text-white/70 leading-relaxed text-[13px]">
-              I&apos;m currently pursuing a degree in Computer Science at UT
-              Arlington, where I&apos;ve developed a strong foundation in
-              software engineering and a passion for building meaningful
-              products. With a unique blend of technical ability and leadership
-              experience, I thrive in collaborative environments where I can
-              contribute to impactful solutions.
+              I&apos;m a Computer Science Honors student at UT Arlington and{" "}
+              <a
+                href="https://devpost.com/atiqurx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 font-semibold text-white underline underline-offset-4 decoration-dotted hover:text-green-400 hover:drop-shadow-[0_0_6px_#22c55e] transition"
+              >
+                4x Hackathon Winner
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+              , passionate about building impactful and user-focused software. I
+              created and open-sourced{" "}
+              <a
+                href="https://mavgrades.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 font-semibold text-white underline underline-offset-4 decoration-dotted hover:text-orange-400 hover:drop-shadow-[0_0_6px_#f97316] transition"
+              >
+                mavgrades
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
+              , a platform that now serves{" "}
+              <span className="font-semibold text-white">
+                over 18,000 students.
+              </span>
             </p>
 
             <p className="mt-4 text-white/70 leading-relaxed text-[13px]">
-              I currently lead software projects at the largest tech club on
-              campus, driving initiatives that bridge innovation and community.
-              Outside of work, I draw inspiration from music, nature, and
-              everyday interactions—fueling both my creativity and curiosity as
-              a developer.
+              As Projects Director at ACM UTA, I lead development teams and
+              drive initiatives that bridge innovation, learning, and community.
+              Outside of code, I draw inspiration from music, nature, and
+              meaningful interactions—fueling both my creativity and curiosity
+              as a developer.
             </p>
 
             {/* Buttons */}
@@ -129,7 +153,7 @@ export default function About() {
               subtitle="Honors B.Sc in Computer Science"
               description="Relevant Coursework: Data Structures & Algorithms, Linear Algebra, Discrete Structures, Object Oriented Programming, Software Testing. Awards & Honors: HackTX ‘24, HackUTA 6, HackSMU VI, Dean’s List, Freshman Distinction Roll"
               startDate="Aug. 2022"
-              endDate="May 2026"
+              endDate="Expected Dec 2026"
               location="Arlington, Texas"
               logo="/logos/uta.jpeg"
               logoAlt="UTA Logo"
